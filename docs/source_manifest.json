@@ -1,0 +1,144 @@
+{
+  "phase diagram J1 J2 J3 J4.py": {
+    "sha256": "30a1bc35aa3aac33c914cf11285678367f708b3cb2c4c8eb8738e99235130c8e",
+    "functions": {
+      "E1": "ce4c6b96f0d8cec95b544c3391f875ee9be665e14852a6ff41471d4167f74b88",
+      "E2": "05c87d44c0cf163b2a960ef2cd26e83399fe01e0680474800dc8c4c9e175b912",
+      "Nparticle12": "cfbcafe427919b486b6427dee0aa02c9cdf48925d188199da6045759846ba464",
+      "Mu12": "2d0c2a30270abb4ab1e439a8810054bb8ed9264571144a577b12b61e87b37ccf",
+      "Etot": "cdf9574257cc7cf4d89cff98d2805bd99e109064dc5f4500298ea6428c3a97fc",
+      "Etot2": "05f59ba8e25635d03cb554353ab2fbf04f97cd850ddb5852cb76a588e26c4b10",
+      "constraint0": "1dc2f145b3986de08c2c1d46d9965b57f1b8055c88e8f2c50e990a7aef487a4f",
+      "constraint1": "d805d34f1acde51d5fe2e8f10f7047572f28f1cbf0e70adff5f2217f465fd481",
+      "constraint2": "bdbc9866a483b6671aaa48f7fc017c7013b50e93c0b0fed9b00e34f48a22cbd2",
+      "constraint3": "8411a1c917210a64c831068ed486c36e1bc92b89e8ca12d83836d00be3c327fd",
+      "constraint4": "564576e33626705c44322ad56e2e247a755fd9cfcfbc2b8168fd9fd9c9039750",
+      "constraint5": "3b4dae7bb9c921b13b3160da1721dcd1029f559048feddff2ca8d951ac8fb2b2",
+      "constraint6": "9f3e009e5ee756bcb3faa591f051689ba542377aba3d9abdefa884ee9eead9be",
+      "constraint7": "d2ec5fe8e4bb5eea29348535fbc2a7c681b4af05f6e8f9a1aac97ca583815826",
+      "constraint8": "b2729cf6095be6d532a8e32115ed20d5894a5ee48698ababf847b32cd76f7883",
+      "constraint9": "17865f9e97e4b22c7697727ea6d20454f92e7da629992d13a2efba4fea7dfcbc",
+      "constraint10": "b03e14f782dccac5bcda1b1e7e6570af11a416a1e941dcb1cdf5ad13ee65f529",
+      "constraint11": "37f9e50116131621a50c5f5a862d74877eccb04cdf832fb599a3948bea1860e1",
+      "constraintZeroflux": "64566960f8f9c7bd002c0b62b38427fae58944fdab86486a5432bb0f4fd3aff2",
+      "Order": "6d918696e05ed7c5f2751db32e2557251ae40694b0108106052ca39d9875f6ce",
+      "D4Symmetry": "8e2e3f1010ecaa6ac06c5fa366abc78440e0d72adbc13aa7f7df57f73f380a80"
+    },
+    "settings": {
+      "t": 1,
+      "tp": 0,
+      "Nx": 10,
+      "Ny": 10,
+      "error": 3
+    }
+  },
+  "phase diagram J1 J2 J3 J4_zero flux subspace.py": {
+    "sha256": "92d67902c3b492b7c4b2b694cfb83d283bec73e25144583e5c90b8d58fb7efb1",
+    "functions": {
+      "E1": "ce4c6b96f0d8cec95b544c3391f875ee9be665e14852a6ff41471d4167f74b88",
+      "E2": "05c87d44c0cf163b2a960ef2cd26e83399fe01e0680474800dc8c4c9e175b912",
+      "Nparticle12": "cfbcafe427919b486b6427dee0aa02c9cdf48925d188199da6045759846ba464",
+      "Mu12": "2d0c2a30270abb4ab1e439a8810054bb8ed9264571144a577b12b61e87b37ccf",
+      "Etot": "cdf9574257cc7cf4d89cff98d2805bd99e109064dc5f4500298ea6428c3a97fc",
+      "Etot2": "05f59ba8e25635d03cb554353ab2fbf04f97cd850ddb5852cb76a588e26c4b10",
+      "constraint0": "1dc2f145b3986de08c2c1d46d9965b57f1b8055c88e8f2c50e990a7aef487a4f",
+      "constraint1": "d805d34f1acde51d5fe2e8f10f7047572f28f1cbf0e70adff5f2217f465fd481",
+      "constraint2": "bdbc9866a483b6671aaa48f7fc017c7013b50e93c0b0fed9b00e34f48a22cbd2",
+      "constraint3": "8411a1c917210a64c831068ed486c36e1bc92b89e8ca12d83836d00be3c327fd",
+      "constraint4": "564576e33626705c44322ad56e2e247a755fd9cfcfbc2b8168fd9fd9c9039750",
+      "constraint5": "3b4dae7bb9c921b13b3160da1721dcd1029f559048feddff2ca8d951ac8fb2b2",
+      "constraint6": "9f3e009e5ee756bcb3faa591f051689ba542377aba3d9abdefa884ee9eead9be",
+      "constraint7": "d2ec5fe8e4bb5eea29348535fbc2a7c681b4af05f6e8f9a1aac97ca583815826",
+      "constraint8": "b2729cf6095be6d532a8e32115ed20d5894a5ee48698ababf847b32cd76f7883",
+      "constraint9": "17865f9e97e4b22c7697727ea6d20454f92e7da629992d13a2efba4fea7dfcbc",
+      "constraint10": "b03e14f782dccac5bcda1b1e7e6570af11a416a1e941dcb1cdf5ad13ee65f529",
+      "constraint11": "37f9e50116131621a50c5f5a862d74877eccb04cdf832fb599a3948bea1860e1",
+      "constraintZeroflux": "64566960f8f9c7bd002c0b62b38427fae58944fdab86486a5432bb0f4fd3aff2",
+      "Order": "a0f964932f1e992481ba3b2368b956ea1aaf9df185ce4e93e107c8e4b091ae67",
+      "D4Symmetry": "8e2e3f1010ecaa6ac06c5fa366abc78440e0d72adbc13aa7f7df57f73f380a80"
+    },
+    "settings": {
+      "t": 1,
+      "tp": 0.2,
+      "Nx": 100,
+      "Ny": 100,
+      "error": 3
+    },
+    "extracted_to": "reference/zero_flux.py",
+    "extracted_functions": [
+      "E1",
+      "E2",
+      "Etot",
+      "Mu12",
+      "Nparticle12",
+      "Order",
+      "constraint0",
+      "constraint1",
+      "constraint10",
+      "constraint11",
+      "constraint2",
+      "constraint3",
+      "constraint4",
+      "constraint5",
+      "constraint6",
+      "constraint7",
+      "constraint8",
+      "constraint9",
+      "constraintZeroflux"
+    ]
+  },
+  "parallel calculation.py": {
+    "sha256": "96d1de72f9ca11d496f95077f7af8e9b137cf011c7ec950938113975a157b513",
+    "functions": {
+      "E1": "ce4c6b96f0d8cec95b544c3391f875ee9be665e14852a6ff41471d4167f74b88",
+      "E2": "05c87d44c0cf163b2a960ef2cd26e83399fe01e0680474800dc8c4c9e175b912",
+      "Nparticle12": "cfbcafe427919b486b6427dee0aa02c9cdf48925d188199da6045759846ba464",
+      "Mu12": "2d0c2a30270abb4ab1e439a8810054bb8ed9264571144a577b12b61e87b37ccf",
+      "Etot": "cdf9574257cc7cf4d89cff98d2805bd99e109064dc5f4500298ea6428c3a97fc",
+      "Order": "e3d3e3a7e129f318df24415fc7c3ccf927784502318c6ca31b728126adb2cd73",
+      "get_phasediagram_data": "4cd8c6e8c3c8e9ba8975cfbf4516736721f340f3d23b70b61bd2a2b55514fc4a",
+      "plot_phase_diagram_J": "59d28ba67a649d7206ced48e280997959ac150147acbaeaf07582b29a7efc37f",
+      "plot_phase_diagram": "f8281662459b50c778a679e4efab94a42490ef3cb2a4dd99b33d58865ffc6ce7",
+      "plot_current": "0ebae76cd6c2e8d9dbf1f5d5164c828fd0abb4c936a2817259903f030adf8f5c",
+      "get_line_cut": "fea1cf355cc41ede9e62887d8d9f89ff79ddb099d665d16f1f3cbf73dfba52de",
+      "plot_linecut": "dd4e5d24abb11c0f66867631626feb54a8a9a7b558ce2f4fa7aa7c33ca7ad969",
+      "plot_linecut_E": "5910aebc421a6be0efe319a830beeba67c042ba30a21474d41aeefccc29e3fbf",
+      "plot_flux_square": "b40e14715616f0ac0c7cd5ebbd90d310cbcfcabcb132fe5b6f02f610d0462e76",
+      "plot_linecut_flux": "4ebafeafa460e5618e70ff962ecd550be7f187fef07a67b3199d24199e5ff053",
+      "variational_energy_persite": "5d51533b4a3dd6c6db02c20c9fc9bf536b0b97ea6c1f987f612ac236fef06ff0",
+      "plot_linecut_E_fixed_nu": "c6a035d071e2c8c27cd08278a3144ebce593e3ae075ac511ebee5279e7b6714d"
+    },
+    "settings": {
+      "t": 1,
+      "tp": 0.2,
+      "Nx": 50,
+      "Ny": 50,
+      "error": 3
+    }
+  },
+  "parallel calculation_integral.py": {
+    "sha256": "af2243620b85d31d6f628285e7db04371bf0d0ab8b18748dcea13c59dc3d3d03",
+    "functions": {
+      "E1": "ce4c6b96f0d8cec95b544c3391f875ee9be665e14852a6ff41471d4167f74b88",
+      "E2": "05c87d44c0cf163b2a960ef2cd26e83399fe01e0680474800dc8c4c9e175b912",
+      "Etot": "2745c2bdfe089c763ebbd4e3c7c87a8bfa20ce18929d49d4e492fdccd286fdcf",
+      "Order": "e3d3e3a7e129f318df24415fc7c3ccf927784502318c6ca31b728126adb2cd73",
+      "get_phasediagram_data": "4cd8c6e8c3c8e9ba8975cfbf4516736721f340f3d23b70b61bd2a2b55514fc4a",
+      "plot_phase_diagram_J": "59d28ba67a649d7206ced48e280997959ac150147acbaeaf07582b29a7efc37f"
+    },
+    "settings": {
+      "t": 1,
+      "tp": 0.2,
+      "Nx": 100,
+      "Ny": 100,
+      "error": 3
+    },
+    "extracted_to": "reference/parallel_integral.py",
+    "extracted_functions": [
+      "E1",
+      "E2",
+      "Etot",
+      "Order"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bond-order-flux-phases"
+version = "0.1.0"
+description = "Refactored author code for bond ordering in four-current flux phases"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Yifan Liu"}]
+dependencies = ["numpy>=1.24", "scipy>=1.10", "matplotlib>=3.7"]
+
+[project.scripts]
+bond-order = "bond_order.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["bond_order*", "reference*"]

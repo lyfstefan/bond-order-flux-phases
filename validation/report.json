@@ -1,0 +1,326 @@
+{
+  "environment": {
+    "python": "3.11.5",
+    "numpy": "1.26.4",
+    "scipy": "1.15.1"
+  },
+  "source_status": "Confirmed project directory; final historical figure-generation version unknown",
+  "source_equivalence": [
+    {
+      "source": "parallel calculation_integral.py",
+      "mesh": 20,
+      "band_max_absolute_error": 0.0,
+      "energy_max_absolute_error": 2.220446049250313e-16,
+      "currents_tested": 3,
+      "fillings_tested": [
+        0.23,
+        0.4,
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "source": "phase diagram J1 J2 J3 J4_zero flux subspace.py",
+      "mesh": 20,
+      "band_max_absolute_error": 0.0,
+      "energy_max_absolute_error": 2.220446049250313e-16,
+      "currents_tested": 3,
+      "fillings_tested": [
+        0.23,
+        0.4,
+        0.5,
+        0.7
+      ]
+    }
+  ],
+  "optimization_examples": [
+    {
+      "parameters": {
+        "mesh": 12,
+        "t": 1.0,
+        "tp": 0.2,
+        "interaction": 4.0,
+        "occupation": "legacy",
+        "particle_tolerance": 3.0
+      },
+      "currents": [
+        -0.6363862363490665,
+        -0.08797537845869667,
+        -0.2875602103459717,
+        0.15108533721820472
+      ],
+      "chemical_potential": -1.953125,
+      "electronic_energy_per_site": -1.523704649751904,
+      "actual_filling": 0.4097222222222222,
+      "particle_error": 1.3999999999999986,
+      "bisection_converged": true,
+      "requested_filling": 0.4,
+      "current_cost_per_site": 0.518244762726039,
+      "energy_per_site": -1.0054598870258649,
+      "settings": {
+        "method": "SHGO",
+        "samples": 32,
+        "iterations": 1,
+        "sampling": "sobol",
+        "symmetry": "rlex",
+        "legacy_lex_slack": 0.0,
+        "zero_flux": false,
+        "bounds": [
+          [
+            -1,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            1
+          ]
+        ]
+      },
+      "square_flux": 2.25686896354319,
+      "selected": "solver candidate",
+      "solver_candidates": [
+        {
+          "sector": 0,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "feasible": true,
+          "max_constraint_violation": 0.0,
+          "currents": [
+            -0.6363862363490665,
+            -0.08797537845869667,
+            -0.2875602103459717,
+            0.15108533721820472
+          ],
+          "energy": -1.0054598870258649
+        }
+      ],
+      "any_feasible_solver_candidate": true
+    },
+    {
+      "parameters": {
+        "mesh": 12,
+        "t": 1.0,
+        "tp": 0.2,
+        "interaction": 4.0,
+        "occupation": "canonical",
+        "particle_tolerance": 3.0
+      },
+      "currents": [
+        -0.6334723619355332,
+        -0.06025259675290698,
+        -0.24783571554293962,
+        0.18325477816533853
+      ],
+      "chemical_potential": -2.0990742523110306,
+      "electronic_energy_per_site": -1.4855934444499517,
+      "actual_filling": 0.4,
+      "particle_error": 0.0,
+      "bisection_converged": true,
+      "requested_filling": 0.4,
+      "current_cost_per_site": 0.49992246437076,
+      "energy_per_site": -0.9856709800791916,
+      "settings": {
+        "method": "SHGO",
+        "samples": 32,
+        "iterations": 1,
+        "sampling": "sobol",
+        "symmetry": "rlex",
+        "legacy_lex_slack": 0.0,
+        "zero_flux": false,
+        "bounds": [
+          [
+            -1,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            1
+          ]
+        ]
+      },
+      "square_flux": 2.3720054834114848,
+      "selected": "solver candidate",
+      "solver_candidates": [
+        {
+          "sector": 0,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "feasible": true,
+          "max_constraint_violation": 0.0,
+          "currents": [
+            -0.6334723619355332,
+            -0.06025259675290698,
+            -0.24783571554293962,
+            0.18325477816533853
+          ],
+          "energy": -0.9856709800791916
+        }
+      ],
+      "any_feasible_solver_candidate": true
+    },
+    {
+      "parameters": {
+        "mesh": 12,
+        "t": 1.0,
+        "tp": 0.2,
+        "interaction": 4.0,
+        "occupation": "canonical",
+        "particle_tolerance": 3.0
+      },
+      "currents": [
+        -0.521991168862377,
+        -0.4888835868522305,
+        -0.012226167765799554,
+        -0.0187633575749367
+      ],
+      "chemical_potential": -1.174015907610885,
+      "electronic_energy_per_site": -1.4861250963157846,
+      "actual_filling": 0.4,
+      "particle_error": 0.0,
+      "bisection_converged": true,
+      "requested_filling": 0.4,
+      "current_cost_per_site": 0.5119834846295354,
+      "energy_per_site": -0.9741416116862492,
+      "settings": {
+        "method": "SHGO",
+        "samples": 32,
+        "iterations": 1,
+        "sampling": "sobol",
+        "symmetry": "legacy_lex",
+        "legacy_lex_slack": 1e-05,
+        "zero_flux": true,
+        "bounds": [
+          [
+            -1,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            1
+          ]
+        ]
+      },
+      "square_flux": 8.833211939673902e-15,
+      "selected": "solver candidate",
+      "solver_candidates": [
+        {
+          "sector": 0,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "feasible": true,
+          "max_constraint_violation": 1.1657341758564144e-14,
+          "currents": [
+            -0.3084921652689023,
+            -0.30847216448621556,
+            -0.3084621644862156,
+            -0.30848216448621557
+          ],
+          "energy": -0.9276560837683745
+        },
+        {
+          "sector": 1,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "feasible": true,
+          "max_constraint_violation": 8.833211939673902e-15,
+          "currents": [
+            -0.521991168862377,
+            -0.4888835868522305,
+            -0.012226167765799554,
+            -0.0187633575749367
+          ],
+          "energy": -0.9741416116862492
+        },
+        {
+          "sector": 2,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "feasible": true,
+          "max_constraint_violation": 1.0864226185347547e-13,
+          "currents": [
+            -0.5055887966356543,
+            -0.5055987966356543,
+            -0.015462205122009878,
+            -0.015460232971661098
+          ],
+          "energy": -0.9739928391061781
+        }
+      ],
+      "any_feasible_solver_candidate": true
+    }
+  ],
+  "occupation_mode_comparison": [
+    {
+      "mode": "legacy",
+      "chemical_potential": -1.708984375,
+      "electronic_energy_per_site": -1.0352240298286284,
+      "actual_filling": 0.3697916666666667,
+      "particle_error": -0.695999999999998,
+      "bisection_converged": true,
+      "requested_filling": 0.371,
+      "current_cost_per_site": 0.1555,
+      "energy_per_site": -0.8797240298286284
+    },
+    {
+      "mode": "canonical",
+      "chemical_potential": -1.6699387035254007,
+      "electronic_energy_per_site": -1.0372418724287218,
+      "actual_filling": 0.371,
+      "particle_error": 0.0,
+      "bisection_converged": true,
+      "requested_filling": 0.371,
+      "current_cost_per_site": 0.1555,
+      "energy_per_site": -0.8817418724287218
+    }
+  ],
+  "canonical_fixed_trial_mesh_sequence": [
+    {
+      "mesh": 24,
+      "energy": -0.8800719337251963
+    },
+    {
+      "mesh": 40,
+      "energy": -0.8798468357185394
+    },
+    {
+      "mesh": 80,
+      "energy": -0.8798709562106573
+    },
+    {
+      "mesh": 120,
+      "energy": -0.8798822286468855
+    }
+  ],
+  "free_lattice_half_filling": {
+    "mesh": 120,
+    "computed": -0.24314307061768742,
+    "continuum": -0.24317084074161066,
+    "absolute_error": 2.7770123923243073e-05
+  },
+  "scope": "Import-safe source refactor; source-band/energy comparisons, normalization and bounded optimization checks. No final-version identification or full paper phase-diagram reproduction. Loop-current ansatz only; no CDW competition.",
+  "all_checks_passed": true
+}

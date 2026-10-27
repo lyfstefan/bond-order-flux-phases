@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite the associated research paper when using these models."
+title: "bond-order-flux-phases - accompanying scientific code"
+authors:
+  - family-names: "Liu"
+    given-names: "Yifan"
+repository-code: "https://github.com/lyfstefan/bond-order-flux-phases"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Liu"
+      given-names: "Yifan"
+    - family-names: "Aji"
+      given-names: "Vivek"
+  title: "Bond ordering in flux phases of interacting spinless fermions on the square lattice"
+  journal: "Physical Review B"
+  volume: "113"
+  start: "045140"
+  doi: "10.1103/3jqj-28q7"
+  year: 2026
