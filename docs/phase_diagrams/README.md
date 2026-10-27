@@ -25,8 +25,8 @@ Each point uses a $40\times40$ momentum mesh, canonical occupation, RLEX
 symmetry sectors, and SHGO with 256 Sobol samples and two iterations.
 
 The comparison shows the root-mean-square current, effective-bond-amplitude
-spread and square flux. The flux is displayed modulo $2\pi$, with $\Phi/\pi$ in $[0,2)$ and a
-cyclic color scale. The individual maps show $J_1,\ldots,J_4$. Their
+spread $\Delta|t_{\mathrm{eff}}|$ and square flux. The flux is displayed modulo $2\pi$, with $\Phi/\pi$ in $[0,2)$ and a
+cyclic color scale. The effective link hopping is $t_{\mathrm{eff},\nu}=t+iVJ_\nu$; its plotted spread is the maximum magnitude minus the minimum magnitude. The individual maps show $J_1,\ldots,J_4$. Their
 cells are calculated parameter points and are not interpolated.
 
 | Files | Contents |

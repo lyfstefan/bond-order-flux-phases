@@ -16,9 +16,9 @@ Four real bond currents $J_\nu$ describe links in the directions
 $(+x,+y,-x,-y)$. The effective hopping and two mean-field bands are
 
 $$
-t_\nu=t+iVJ_\nu,\qquad
+t_{\mathrm{eff},\nu}=t+iVJ_\nu,\qquad
 E_\pm(\mathbf{k})=-4t'\cos k_x\cos k_y
-\pm\left|\sum_\nu t_\nu e^{i\mathbf{k}\cdot\mathbf{e}_\nu}\right|.
+\pm\left|\sum_\nu t_{\mathrm{eff},\nu} e^{i\mathbf{k}\cdot\mathbf{e}_\nu}\right|.
 $$
 
 The energy per site includes the current cost
@@ -27,6 +27,9 @@ site, between 0 and 1. Currents are dimensionless; $t$, $t'$, $V$, band
 energies and chemical potential share one energy unit.
 A full square Brillouin-zone mesh is used with weight $1/2$ for each folded
 band entry.
+
+The bond-amplitude spread is
+$\Delta|t_{\mathrm{eff}}|=\max_\nu|t_{\mathrm{eff},\nu}|-\min_\nu|t_{\mathrm{eff},\nu}|$.
 
 For $t>0$, the link phases are $\phi_\nu=\arctan(VJ_\nu/t)$ and the square
 flux is $\Phi\equiv\phi_4-\phi_1+\phi_2-\phi_3\pmod{2\pi}$. The plotted $\Phi/\pi$ lies in $[0,2)$. Both the unconstrained flux

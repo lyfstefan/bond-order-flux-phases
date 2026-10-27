@@ -184,7 +184,7 @@ def plot_phase_comparison(ordinary, zero_flux):
     fields = ["current_rms", "bond_amplitude_spread", "square_flux_mod_2pi_over_pi"]
     labels = [
         r"$J_{\mathrm{rms}}$",
-        r"$\Delta |t|$",
+        r"$\Delta |t_{\mathrm{eff}}|$",
         r"$\Phi/\pi$",
     ]
     for row, (field, label) in enumerate(zip(fields, labels)):
@@ -211,11 +211,13 @@ def plot_bands(model, currents):
     fig, axes = plt.subplots(
         1, 2, figsize=(width(2), width(2) * 0.58), constrained_layout=True
     )
-    for ax, band, label in zip(axes, bands, ["(a)", "(b)"]):
+    for ax, band, title, symbol in zip(
+        axes, bands, ["(a)", "(b)"], [r"$E_-$", r"$E_+$"]
+    ):
         im = ax.pcolormesh(
             model.kx / np.pi, model.ky / np.pi, band, shading="auto", cmap="viridis"
         )
-        ax.set(xlabel=r"$k_x/\pi$", ylabel=r"$k_y/\pi$", title=label)
-        panel_colorbar(fig, ax, im, r"$E_-$" if label == "Lower band" else r"$E_+$")
+        ax.set(xlabel=r"$k_x/\pi$", ylabel=r"$k_y/\pi$", title=title)
+        panel_colorbar(fig, ax, im, symbol)
     fig.suptitle(rf"$V/t={model.interaction/model.t:g}$")
     return fig

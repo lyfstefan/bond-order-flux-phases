@@ -5,7 +5,7 @@ import matplotlib
 matplotlib.use("Agg")
 from matplotlib import pyplot as plt
 import numpy as np
-from bond_order.plotting import scan_grid, plot_phase_diagram, flux_mod_2pi
+from bond_order.plotting import scan_grid, plot_phase_diagram, flux_mod_2pi, plot_bands
 from bond_order import FluxModel
 from bond_order.optimization import refine_from_seed, rlex_values
 
@@ -50,6 +50,17 @@ class ScanPlotting(unittest.TestCase):
         )
         fig = plot_phase_diagram(results)
         fig.canvas.draw()
+        plt.close(fig)
+
+    def test_lower_and_upper_band_labels(self):
+        fig = plot_bands(FluxModel(mesh=12), np.zeros(4))
+        labels = [
+            child._publication_label
+            for ax in fig.axes
+            for child in ax.child_axes
+            if hasattr(child, "_publication_label")
+        ]
+        self.assertEqual(labels, [r"$E_-$", r"$E_+$"])
         plt.close(fig)
 
     def test_oriented_flux_is_periodic_and_zero_roundoff_is_removed(self):
