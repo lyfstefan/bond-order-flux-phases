@@ -1,4 +1,4 @@
-"""Figures use the supplied publication template v0; no TeX or show() calls."""
+"""Compact LaTeX figures with explicit numerical solver-status markers."""
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -146,6 +146,16 @@ def plot_phase_diagram(results):
         else "Square flux unconstrained"
     )
     fig.suptitle(subspace)
+    if not grid["solver_success"].all():
+        from matplotlib.lines import Line2D
+
+        fig.legend(
+            [Line2D([], [], marker="x", color="black", linestyle="none", markersize=4)],
+            ["Solver not confirmed"],
+            loc="outside lower center",
+            frameon=False,
+            handlelength=1,
+        )
     return fig
 
 

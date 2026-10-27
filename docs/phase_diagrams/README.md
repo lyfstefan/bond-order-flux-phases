@@ -77,3 +77,8 @@ OPENBLAS_NUM_THREADS=1 python -m examples.phase_diagrams --plot-only --output do
 The latter repeats the recorded seed/refinement procedure and selected checks,
 but does not repeat the 760 independent global searches. `--skip-refinement-checks`
 skips the finer-grid checks and their seeds, so it is not identical to this release.
+
+A black cross in an initial-scan map means that no saved solver candidate
+reported both success and feasibility. The initial unconstrained scan has
+two such points (filling 0.1; V/t = 3.0 and 3.25). These markers report
+solver status, not a physical phase. Neither remains in the refined audit.
