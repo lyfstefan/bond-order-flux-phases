@@ -190,3 +190,10 @@ Use `citation.bib` or `CITATION.cff` to cite the associated paper.
 ## Generated example
 
 ![Refactored four-current calculation, small-mesh example](docs/bands.png)
+
+## Figure exports
+
+Figures now follow [publication template v0](docs/figure_style.md), with
+LM Roman 10 text, Computer Modern mathematics, 10/9 pt typography and a
+17.8 cm printed width. PDF, 300 dpi PNG, SVG and typography records accompany
+the figures. The saved numerical data are unchanged.

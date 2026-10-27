@@ -1,2 +1,2 @@
-# Matplotlib SVG path data conventionally ends coordinate lines with spaces.
+# Generated Matplotlib SVG coordinate paths contain trailing spaces.
 *.svg -whitespace

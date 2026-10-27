@@ -1,0 +1,17 @@
+{
+  "parameters": {
+    "mesh": 24,
+    "t": 1.0,
+    "tp": 0.2,
+    "interaction": 4.0,
+    "occupation": "legacy",
+    "particle_tolerance": 3.0
+  },
+  "currents": [
+    -0.6712834666338383,
+    0.09454445521383018,
+    -0.21261506134690983,
+    0.09462144697211382
+  ],
+  "requested_filling": 0.4
+}
