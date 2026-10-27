@@ -1,18 +1,58 @@
 {
-  "template": "v0",
+  "template": "v1_compact_square_frames_latex",
+  "text_engine": "latex",
+  "text_usetex": true,
   "frame_pt": 1.0,
   "axis_labels_pt": 10,
   "ticks_pt": 9,
   "colorbar_ticks_pt": 9,
   "annotations_pt": 9,
   "legends_pt": 9,
-  "page_width_cm": 17.8,
-  "font_family": [
-    "Latin Modern Roman",
-    "LM Roman 10",
-    "CMU Serif",
-    "DejaVu Serif"
+  "page_width_cm": 15.200000000000001,
+  "page_height_cm": 15.200000000000001,
+  "font_family": "Computer Modern Roman",
+  "math_font_family": "Computer Modern Math Italic",
+  "data_frames": [
+    {
+      "bounds_figure_fraction": [
+        0.05818644890810736,
+        0.5592023644234834,
+        0.4078572331856942,
+        0.9088731487010703
+      ],
+      "width_cm": 5.31499592101932,
+      "height_cm": 5.314995921019321
+    },
+    {
+      "bounds_figure_fraction": [
+        0.4730069584095911,
+        0.5592023644234831,
+        0.8226777426871786,
+        0.9088731487010707
+      ],
+      "width_cm": 5.314995921019331,
+      "height_cm": 5.314995921019332
+    },
+    {
+      "bounds_figure_fraction": [
+        0.05818644890810736,
+        0.07644223926100754,
+        0.4078572331856942,
+        0.42611302353859437
+      ],
+      "width_cm": 5.31499592101932,
+      "height_cm": 5.314995921019319
+    },
+    {
+      "bounds_figure_fraction": [
+        0.4730069584095911,
+        0.07644223926100721,
+        0.8226777426871786,
+        0.4261130235385947
+      ],
+      "width_cm": 5.314995921019331,
+      "height_cm": 5.314995921019329
+    }
   ],
-  "math_fontset": "cm",
-  "pinned_font_file": "/Users/yifanliu/Library/Fonts/lmroman10-regular.otf"
+  "pinned_font_file": null
 }

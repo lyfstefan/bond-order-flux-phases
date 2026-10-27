@@ -33,7 +33,7 @@ def main():
     parser.add_argument("--interactions", help="comma-separated V values for sweep")
     parser.add_argument("--output", type=Path, default=Path("examples/output"))
     parser.add_argument(
-        "--font-path", type=Path, help="optional Roman font file to pin at export"
+        "--font-path", type=Path, help="legacy option; LaTeX selects Computer Modern"
     )
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
@@ -50,7 +50,6 @@ def main():
 
         apply_style(font_path=args.font_path)
         save(fig, args.output / "phase_diagram")
-        fig.savefig(args.output / "phase_diagram.svg")
         plt.close(fig)
 
     def point(v, nu):

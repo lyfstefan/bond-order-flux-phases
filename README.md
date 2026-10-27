@@ -17,7 +17,24 @@ have reproduced every published phase boundary.
 This bond-order project is separate from the author's Affleck project.
 No Affleck source or result files are included.
 
-## Phase diagrams
+## Phase-region overview
+
+![Recovered author phase regions](docs/phase_diagrams/phase_regions.png)
+
+This adds the missing categorical N/A-H region overview from the author's
+original submitted `Phase_diagram.pdf` and `Phase_diagram_theta2.pdf`.
+Each 20x20 categorical map was recovered from 400 visible vector cells,
+with the color-to-letter mapping checked at every original on-map phase
+letter. The two source figure hashes, coordinate grids and exact labels
+are saved in `docs/phase_diagrams/historical_regions/`. These are recovered
+historical figure regions, distinct from the newly optimized maps below.
+[Recovery provenance](docs/phase_diagrams/historical_regions/README.md).
+
+```sh
+python -m examples.phase_regions
+```
+
+## New calculated order-parameter maps
 
 ![Calculated bond-order and flux maps](docs/phase_diagrams/phase_diagram_comparison.png)
 
@@ -97,7 +114,7 @@ python -m bond_order.cli plot-sweep --input examples/output/sweep/sweep.json \
 
 All sweeps are serial and run only when requested. No top-level fitting,
 optimization, multiprocessing, plotting or filesystem output occurs on
-import. Matplotlib does not require TeX or a particular system font.
+import. Figure export uses the LaTeX tools documented below.
 Optionally install the package with `python -m pip install -e .` to use the
 `bond-order` command outside the repository root.
 
@@ -152,7 +169,7 @@ This is not an assertion of identical minimizer paths across versions.
 | `bond_order/model.py` | Parameters, source band expressions, energy and flux |
 | `bond_order/occupation.py` | Legacy and canonical filling algorithms |
 | `bond_order/optimization.py` | SHGO, symmetry sectors, zero-flux constraint and solver diagnostics |
-| `bond_order/plotting.py` | Figure creation without global plotting side effects |
+| `bond_order/plotting.py` | Explicit LaTeX figure creation |
 | `bond_order/output.py` | Explicit JSON and numerical-array output |
 | `bond_order/cli.py` | One-point and explicit sweep commands |
 | `reference/` | Extracted original functions for comparison, with no top-level sweeps |
@@ -193,7 +210,10 @@ Use `citation.bib` or `CITATION.cff` to cite the associated paper.
 
 ## Figure exports
 
-Figures now follow [publication template v0](docs/figure_style.md), with
-LM Roman 10 text, Computer Modern mathematics, 10/9 pt typography and a
-17.8 cm printed width. PDF, 300 dpi PNG, SVG and typography records accompany
-the figures. The saved numerical data are unchanged.
+Figures follow [publication style v1](docs/figure_style.md): real LaTeX text
+and mathematics, Computer Modern fonts, 10/9 pt typography, and compact figures
+(7.6 cm single-panel / 15.2 cm multipanel width), with square data axes
+frames and canvas height chosen for the panel arrangement. PDF, 300 dpi PNG,
+SVG and typography records accompany every figure. Plotting now requires
+a LaTeX installation; model evaluation and optimization remain independent
+of the plotting toolchain.

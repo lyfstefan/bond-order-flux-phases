@@ -1,4 +1,12 @@
-# Calculated phase-space maps
+# Bond-order phase diagrams
+
+![Historical phase regions](phase_regions.png)
+
+The previously missing categorical overview is now provided from the
+original author figure cells. [Recovery provenance](historical_regions/README.md)
+distinguishes those historical region labels from the new calculations below.
+
+# New calculated phase-space maps
 
 ![Comparison](phase_diagram_comparison.png)
 

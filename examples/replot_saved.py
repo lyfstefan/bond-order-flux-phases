@@ -21,7 +21,6 @@ def main():
     def export(fig, path):
         apply_style(font_path=args.font_path)
         save(fig, path)
-        fig.savefig(path.parent / (path.name + ".svg"))
         plt.close(fig)
 
     scans = root / "phase_diagrams"
@@ -35,6 +34,9 @@ def main():
         for name in ["unconstrained", "zero_flux"]
     ]
     export(plot_phase_comparison(a, b), scans / "phase_diagram_comparison")
+    from bond_order.phase_regions import export_regions
+
+    export_regions(scans)
     settings = json.loads((root / "bands_parameters.json").read_text())
     export(
         plot_bands(FluxModel(**settings["parameters"]), settings["currents"]),

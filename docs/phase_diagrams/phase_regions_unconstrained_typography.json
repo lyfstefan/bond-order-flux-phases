@@ -1,0 +1,28 @@
+{
+  "template": "v1_compact_square_frames_latex",
+  "text_engine": "latex",
+  "text_usetex": true,
+  "frame_pt": 1.0,
+  "axis_labels_pt": 10,
+  "ticks_pt": 9,
+  "colorbar_ticks_pt": 9,
+  "annotations_pt": 9,
+  "legends_pt": 9,
+  "page_width_cm": 7.6000000000000005,
+  "page_height_cm": 8.362,
+  "font_family": "Computer Modern Roman",
+  "math_font_family": "Computer Modern Math Italic",
+  "data_frames": [
+    {
+      "bounds_figure_fraction": [
+        0.11637289781621471,
+        0.13838583447387567,
+        0.9587442880791527,
+        0.9039948473892463
+      ],
+      "width_cm": 6.402022565998329,
+      "height_cm": 6.402022565998329
+    }
+  ],
+  "pinned_font_file": null
+}

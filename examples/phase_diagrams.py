@@ -254,7 +254,6 @@ def assemble(output, refinement_checks=True, font_path=None):
         fig = plot_phase_diagram(rows)
         apply_style(font_path=font_path)
         save(fig, derived / f"{name}_order_parameters")
-        fig.savefig(derived / f"{name}_order_parameters.svg")
         plt.close(fig)
         audit[name] = {
             "failed_solver_cells": int(np.count_nonzero(~grid["solver_success"])),
@@ -271,7 +270,6 @@ def assemble(output, refinement_checks=True, font_path=None):
     fig = plot_phase_comparison(scans["unconstrained"], scans["zero_flux"])
     apply_style(font_path=font_path)
     save(fig, output / "phase_diagram_comparison")
-    fig.savefig(output / "phase_diagram_comparison.svg")
     plt.close(fig)
     if refinement_checks:
         for filling, v in refinement_points:
@@ -340,7 +338,7 @@ def main():
     )
     parser.add_argument("--skip-refinement-checks", action="store_true")
     parser.add_argument(
-        "--font-path", type=Path, help="optional Roman font file to pin at export"
+        "--font-path", type=Path, help="legacy option; LaTeX selects Computer Modern"
     )
     args = parser.parse_args()
     output = args.output.resolve()

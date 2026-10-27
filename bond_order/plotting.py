@@ -127,7 +127,9 @@ def plot_phase_diagram(results):
     """Four order-parameter maps, without guessing published phase labels."""
     apply_style()
     grid = scan_grid(results)
-    fig, axes = plt.subplots(2, 2, figsize=(width(2), 5.3), constrained_layout=True)
+    fig, axes = plt.subplots(
+        2, 2, figsize=(width(2), width(2)), constrained_layout=True
+    )
     for index, ax in enumerate(axes.flat):
         im = _map(
             ax,
@@ -160,7 +162,9 @@ def plot_phase_comparison(ordinary, zero_flux):
         if a["parameters"][key] != b["parameters"][key]:
             raise ValueError("comparison model settings differ")
     apply_style()
-    fig, axes = plt.subplots(3, 2, figsize=(width(2), 7.5), constrained_layout=True)
+    fig, axes = plt.subplots(
+        3, 2, figsize=(width(2), width(2) * 1.4), constrained_layout=True
+    )
     fields = ["current_rms", "bond_amplitude_spread", "square_flux_over_pi"]
     labels = [
         r"$\sqrt{\langle J_i^2\rangle}$",
@@ -188,12 +192,14 @@ def plot_phase_comparison(ordinary, zero_flux):
 def plot_bands(model, currents):
     apply_style()
     bands = model.bands(currents)
-    fig, axes = plt.subplots(1, 2, figsize=(width(2), 3.0), constrained_layout=True)
+    fig, axes = plt.subplots(
+        1, 2, figsize=(width(2), width(2) * 0.58), constrained_layout=True
+    )
     for ax, band, label in zip(axes, bands, ["Lower band", "Upper band"]):
         im = ax.pcolormesh(
             model.kx / np.pi, model.ky / np.pi, band, shading="auto", cmap="viridis"
         )
         ax.set(xlabel="kx / pi", ylabel="ky / pi", title=label)
         fig.colorbar(im, ax=ax, label="Energy")
-    fig.suptitle(f"Four-current bands: V/t = {model.interaction/model.t:g}")
+    fig.suptitle(rf"Four-current bands: $V/t = {model.interaction/model.t:g}$")
     return fig
