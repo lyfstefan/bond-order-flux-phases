@@ -29,7 +29,7 @@ A full square Brillouin-zone mesh is used with weight $1/2$ for each folded
 band entry.
 
 For $t>0$, the link phases are $\phi_\nu=\arctan(VJ_\nu/t)$ and the square
-flux is $\Phi=\phi_4-\phi_1+\phi_2-\phi_3$. Both the unconstrained flux
+flux is $\Phi\equiv\phi_4-\phi_1+\phi_2-\phi_3\pmod{2\pi}$. The plotted $\Phi/\pi$ lies in $[0,2)$. Both the unconstrained flux
 ansatz and the $\Phi=0$ subspace can be optimized. The variational space
 contains loop currents; competing charge-density order is outside this ansatz.
 

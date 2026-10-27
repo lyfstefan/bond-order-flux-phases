@@ -51,10 +51,10 @@
       "height_fraction_of_frame": 0.6000000000000001,
       "width_fraction_of_frame": 0.04499999999999988,
       "bottom_offset_cm": 0.0,
-      "label": "$E_-$",
+      "label": "$E_+$",
       "label_position": "above",
       "shared": false,
-      "label_bottom_clearance_cm": 0.0796056454960568,
+      "label_bottom_clearance_cm": 0.07667806513200347,
       "scientific_exponent": 0
     },
     {

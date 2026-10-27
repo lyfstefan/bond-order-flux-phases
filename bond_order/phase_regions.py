@@ -45,8 +45,8 @@ def draw(ax, data, title):
         rasterized=True,
     )
     ax.set(
-        xlabel=r"Filling $\nu$",
-        ylabel=r"Interaction $V/t$",
+        xlabel=r"$\nu$",
+        ylabel=r"$V/t$",
         title=title,
         xlim=(0, 1),
         ylim=(min(data["interactions"]), max(data["interactions"])),
@@ -70,7 +70,7 @@ def export_regions(root):
         load_regions(root / "historical_regions" / f"{name}.json")
         for name in ["unconstrained", "zero_flux"]
     ]
-    for item, title in zip(data, ["Unconstrained square flux", "Zero square flux"]):
+    for item, title in zip(data, ["Unconstrained", r"$\Phi=0$"]):
         fig, ax = plt.subplots(
             figsize=(width(1), width(1) + 0.3), constrained_layout=True
         )
@@ -81,9 +81,7 @@ def export_regions(root):
     fig, axes = plt.subplots(
         1, 2, figsize=(width(2), width(2) * 0.60), constrained_layout=True
     )
-    for ax, item, title in zip(
-        axes, data, ["(a) Unconstrained square flux", "(b) Zero square flux"]
-    ):
+    for ax, item, title in zip(axes, data, ["(a) Unconstrained", r"(b) $\Phi=0$"]):
         draw(ax, item, title)
     fig.legend(
         [Patch(facecolor=c) for c in COLORS],
@@ -95,7 +93,7 @@ def export_regions(root):
         handletextpad=0.35,
         columnspacing=0.8,
     )
-    fig.suptitle(r"Original phase regions: $t=1$, $t^{\prime}=0.2$")
+    fig.suptitle(r"$t=1$, $t^{\prime}=0.2$")
     stem = root / "phase_regions"
     save(fig, stem)
     plt.close(fig)

@@ -6,6 +6,15 @@ from matplotlib.colors import TwoSlopeNorm
 from .publication_style import apply_style, width, panel_colorbar
 
 
+def flux_mod_2pi(flux):
+    """Oriented flux in [0, 2 pi), with 1e-10 rad endpoint roundoff removed."""
+    value = np.remainder(flux, 2 * np.pi)
+    endpoint = np.isclose(value, 0, atol=1e-10, rtol=0) | np.isclose(
+        value, 2 * np.pi, atol=1e-10, rtol=0
+    )
+    return np.where(endpoint, 0.0, value)
+
+
 def scan_grid(results):
     """Index a complete rectangular scan by its actual coordinates.
 
@@ -63,6 +72,7 @@ def scan_grid(results):
         "energy": energy,
         "solver_success": trusted,
         "square_flux_over_pi": flux,
+        "square_flux_mod_2pi_over_pi": flux_mod_2pi(flux * np.pi) / np.pi,
         "current_rms": np.sqrt(np.mean(j * j, axis=2)),
         "bond_amplitude_spread": np.ptp(hopping, axis=2),
         "additional_seed_refinement": any(
@@ -95,7 +105,7 @@ def _map(ax, grid, values, **kwargs):
         rasterized=True,
         **kwargs,
     )
-    ax.set(xlabel=r"Filling $\nu$", ylabel=r"Interaction $V/t$")
+    ax.set(xlabel=r"$\nu$", ylabel=r"$V/t$")
     ax.set_xlim(grid["fillings"][[0, -1]])
     ax.set_ylim(grid["interactions"][[0, -1]])
     # Convert energy-coordinate labels only when t differs from one.
@@ -140,11 +150,7 @@ def plot_phase_diagram(results):
         )
         ax.set_title(f"({chr(97+index)})")
         panel_colorbar(fig, ax, im, rf"$J_{index+1}$")
-    subspace = (
-        "Zero square flux"
-        if grid["settings"]["zero_flux"]
-        else "Square flux unconstrained"
-    )
+    subspace = r"$\Phi=0$" if grid["settings"]["zero_flux"] else "Unconstrained"
     fig.suptitle(subspace)
     if not grid["solver_success"].all():
         from matplotlib.lines import Line2D
@@ -175,24 +181,24 @@ def plot_phase_comparison(ordinary, zero_flux):
     fig, axes = plt.subplots(
         3, 2, figsize=(width(2), width(2) * 1.4), constrained_layout=True
     )
-    fields = ["current_rms", "bond_amplitude_spread", "square_flux_over_pi"]
+    fields = ["current_rms", "bond_amplitude_spread", "square_flux_mod_2pi_over_pi"]
     labels = [
         r"$J_{\mathrm{rms}}$",
         r"$\Delta |t|$",
-        r"$\phi_{\mathrm{sq}}/\pi$",
+        r"$\Phi/\pi$",
     ]
     for row, (field, label) in enumerate(zip(fields, labels)):
         high = max(max(float(np.max(abs(g[field]))) for g in grids), 1e-8)
         for col, g in enumerate(grids):
             kwargs = (
-                dict(cmap="RdBu_r", vmin=-high, vmax=high)
+                dict(cmap="twilight", vmin=0, vmax=2)
                 if row == 2
                 else dict(cmap="viridis", vmin=0, vmax=high)
             )
             im = _map(axes[row, col], g, g[field], **kwargs)
             axes[row, col].set_title(
                 f"({chr(97+row*2+col)}) "
-                + ("Unconstrained" if col == 0 else "Zero square flux")
+                + (("Unconstrained" if col == 0 else r"$\Phi=0$") if row == 0 else "")
             )
             panel_colorbar(fig, axes[row, col], im, label)
 
@@ -205,11 +211,11 @@ def plot_bands(model, currents):
     fig, axes = plt.subplots(
         1, 2, figsize=(width(2), width(2) * 0.58), constrained_layout=True
     )
-    for ax, band, label in zip(axes, bands, ["Lower band", "Upper band"]):
+    for ax, band, label in zip(axes, bands, ["(a)", "(b)"]):
         im = ax.pcolormesh(
             model.kx / np.pi, model.ky / np.pi, band, shading="auto", cmap="viridis"
         )
         ax.set(xlabel=r"$k_x/\pi$", ylabel=r"$k_y/\pi$", title=label)
         panel_colorbar(fig, ax, im, r"$E_-$" if label == "Lower band" else r"$E_+$")
-    fig.suptitle(rf"Four-current bands: $V/t = {model.interaction/model.t:g}$")
+    fig.suptitle(rf"$V/t={model.interaction/model.t:g}$")
     return fig

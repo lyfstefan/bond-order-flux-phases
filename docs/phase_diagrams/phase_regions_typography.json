@@ -8,16 +8,16 @@
   "colorbar_ticks_pt": 9,
   "annotations_pt": 9,
   "legends_pt": 9,
-  "page_width_cm": 8.851888682607457,
+  "page_width_cm": 8.84,
   "page_height_cm": 5.303999999999999,
   "font_family": "Computer Modern Roman",
   "math_font_family": "Computer Modern Math Italic",
   "data_frames": [
     {
       "bounds_figure_fraction": [
-        0.11027059231978638,
+        0.10907401872991851,
         0.3230468772286573,
-        0.391744008693693,
+        0.3909259812700815,
         0.7928001481289291
       ],
       "width_cm": 2.491571348855041,
@@ -25,9 +25,9 @@
     },
     {
       "bounds_figure_fraction": [
-        0.6095990586486265,
+        0.6090740187299185,
         0.3230468772286573,
-        0.8910724750225332,
+        0.8909259812700815,
         0.7928001481289291
       ],
       "width_cm": 2.491571348855041,
