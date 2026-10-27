@@ -1,84 +1,85 @@
-# Bond-order phase diagrams
+# Phase diagrams and order-parameter maps
 
-![Historical phase regions](phase_regions.png)
+This directory contains categorical phase-region maps and numerical scans
+of the four-current mean-field ansatz. All fillings are particles per
+physical site; energies are measured in units of $t$.
 
-The previously missing categorical overview is now provided from the
-original author figure cells. [Recovery provenance](historical_regions/README.md)
-distinguishes those historical region labels from the new calculations below.
+## Phase regions
 
-# New calculated phase-space maps
+![Categorical phase regions](phase_regions.png)
 
-![Comparison](phase_diagram_comparison.png)
+The N/A–H labels are the classifications shown in the submitted figures.
+They are stored as two $20\times20$ grids in
+[historical_regions/](historical_regions/README.md). The grids cover
+$0\leq\nu\leq1$, with $0\leq V/t\leq5$ for unconstrained square flux and
+$2\leq V/t\leq5$ for zero square flux. Both use $t'/t=0.2$.
 
-The maps compare unconstrained and zero-square-flux mean-field calculations.
-They show current strength, effective-bond-amplitude ordering and square flux.
-Four individual current-component maps are also provided below. No A-H phase
-letters, interpolated cells or manually edited phase-boundary curves are used.
+## Current, bond-amplitude and flux maps
 
-## Calculation
+![Numerical comparison of the two subspaces](phase_diagram_comparison.png)
 
-- t=1, t'=0.2; filling .05,.10,...,.95; V=.25,.50,...,5.
-- 19x20=380 points per subspace, 760 independent SHGO calculations in total.
-- Momentum mesh 40x40; canonical fixed filling; RLEX; SHGO 256 Sobol samples,
-  two iterations. The phase-map occupation choice is explicit; it does not
-  silently alter the package's legacy default.
-- Every point records currents, requested/actual filling, energy components,
-  solver settings, statuses and feasibility. Original Physics sources are unchanged.
+The numerical scans use $t=1$, $t'=0.2$, fillings
+$\nu=0.05,0.10,\ldots,0.95$ and interactions
+$V=0.25,0.50,\ldots,5$. There are 380 points per flux subspace.
+Each point uses a $40\times40$ momentum mesh, canonical occupation, RLEX
+symmetry sectors, and SHGO with 256 Sobol samples and two iterations.
 
-## Files
+The comparison shows the root-mean-square current, effective-bond-amplitude
+spread and square flux. The individual maps show $J_1,\ldots,J_4$. Their
+cells are calculated parameter points and are not interpolated.
 
-| Artifact | Purpose |
-|---|---|
-| [Comparison PNG](phase_diagram_comparison.png), [SVG](phase_diagram_comparison.svg) | Current-strength, bond-ordering and flux maps |
-| [Unconstrained J1-J4](audited/unconstrained_order_parameters.png) | Four current-component maps after recorded candidate refinement |
-| [Zero-flux J1-J4](audited/zero_flux_order_parameters.png) | Corresponding restricted-subspace maps |
-| [Raw ordinary scan](unconstrained/sweep.json) | Independent unmodified SHGO results |
-| [Raw zero-flux scan](zero_flux/sweep.json) | Independent unmodified SHGO results |
-| [Audited ordinary data](audited/unconstrained.json), [NPZ](audited/unconstrained.npz) | Values actually plotted in the audited maps |
-| [Audited zero-flux data](audited/zero_flux.json), [NPZ](audited/zero_flux.npz) | Corresponding restricted-subspace values |
-| [Numerical audit](audit.json) | Every refinement, variational comparison and selected finer-grid check |
+| Files | Contents |
+| --- | --- |
+| `unconstrained/sweep.json` | Independent unconstrained searches |
+| `zero_flux/sweep.json` | Independent zero-flux searches |
+| `audited/unconstrained.json`, `.npz` | Unconstrained values used in the comparison |
+| `audited/zero_flux.json`, `.npz` | Zero-flux values used in the comparison |
+| [Unconstrained currents](audited/unconstrained_order_parameters.png) | Four refined current-component maps |
+| [Zero-flux currents](audited/zero_flux_order_parameters.png) | Four refined current-component maps |
+| [audit.json](audit.json) | Candidate updates, variational comparison and mesh checks |
 
-## Candidate refinement and scope
+## Minimization and convergence
 
-The independent scans initially had 34 points where the ordinary
-solution energy exceeded the restricted energy by more than 1e-7, with maximum
-violation 0.0010587777. That indicates missed minimizers,
-since each restricted solution is also an admissible ordinary trial.
+Since the zero-flux variational space is contained in the unconstrained
+space, its minimum energy cannot be lower at the same parameters. The
+independent scans had 34 violations larger than $10^{-7}$, with a maximum
+of $1.0588\times10^{-3}$ per site. Feasible cross-subspace seeds,
+selected finer-grid seeds and neighbor continuation were therefore used
+for additional local searches at the actual parameter points.
 
-The plotted data therefore include explicit admissible cross-subspace seeds,
-selected finer-grid seeds evaluated again at the coarse grid, and forward/backward
-neighbor continuation. For transfers between V values, J is rescaled to keep
-V*J (and all link phases) fixed; transfers outside the original bounds are rejected.
-Every accepted candidate is re-evaluated and locally optimized at its actual
-(nu,V). Neither energies nor currents are interpolated into the map. Raw independent
-scans remain unchanged. The audit lists 163 accepted candidate updates.
-The final maximum variational-nesting residual is 1.05e-12.
+The audit records 163 accepted updates. After refinement, the largest
+variational-nesting residual is $1.05\times10^{-12}$. Twelve selected
+checks use a $60\times60$ mesh, 512 SHGO samples and three iterations.
+Among those checks, the largest fixed-current mesh-energy change is
+$1.08821\times10^{-4}$ per site, and the largest additional search gain
+is $1.40115\times10^{-4}$ per site.
 
-Twelve selected checks use a 60x60 mesh, 512 SHGO samples and three iterations,
-also retaining refined feasible seeds. Among those checks, the largest fixed-current
-mesh energy change is 0.000108821, and the largest extra search gain on the fine mesh
-is 0.000140115, in the common energy unit per site. These finite checks do not establish
-that every phase boundary is converged. The figures are exploratory finite-grid
-maps within the loop-current ansatz; there is no CDW competition or certified
-reproduction of the paper's exact A-H phase diagram.
+These checks assess the stated finite-grid calculations within the
+loop-current ansatz. Phase-boundary convergence and competition with other
+orders require separate calculations. A cross in a raw map indicates that
+no saved candidate reported both solver success and feasibility. The two
+such points in the raw unconstrained scan, at $\nu=0.1$ and
+$V/t=3.0,3.25$, are resolved in the refined data.
 
-Regenerate the calculations and audited figures from the repository root:
+## Reproduction
+
+From the repository root, redraw the saved results without minimization:
 
 ```sh
-OPENBLAS_NUM_THREADS=1 python -m examples.phase_diagrams --output examples/output/phase_diagrams
+python -m examples.replot_saved
 ```
 
-Regenerate from these saved independent scans:
+To calculate the paired scans and perform the refinement checks:
+
+```sh
+OPENBLAS_NUM_THREADS=1 python -m examples.phase_diagrams
+```
+
+To repeat the refinement procedure from the independent scans in this
+directory, without repeating their global searches:
 
 ```sh
 OPENBLAS_NUM_THREADS=1 python -m examples.phase_diagrams --plot-only --output docs/phase_diagrams
 ```
 
-The latter repeats the recorded seed/refinement procedure and selected checks,
-but does not repeat the 760 independent global searches. `--skip-refinement-checks`
-skips the finer-grid checks and their seeds, so it is not identical to this release.
-
-A black cross in an initial-scan map means that no saved solver candidate
-reported both success and feasibility. The initial unconstrained scan has
-two such points (filling 0.1; V/t = 3.0 and 3.25). These markers report
-solver status, not a physical phase. Neither remains in the refined audit.
+PDF, PNG and SVG exports share the same coordinate grids and normalization.

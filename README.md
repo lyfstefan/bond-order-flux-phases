@@ -1,101 +1,67 @@
 # Bond ordering in flux phases
 
-Refactored author research code associated with Yifan Liu and Vivek Aji,
-**Bond ordering in flux phases of interacting spinless fermions on the square
-lattice**, Physical Review B **113**, 045140 (2026).
-[DOI](https://doi.org/10.1103/3jqj-28q7) |
-[arXiv:2402.09577](https://arxiv.org/abs/2402.09577).
+Mean-field calculations of bond ordering and loop-current phases for
+interacting spinless fermions on the square lattice. The calculations
+accompany Y. Liu and V. Aji, *Physical Review B* **113**, 045140 (2026).
 
-This October 2026 release organizes the author's existing **four-current
-research programs** into an import-safe package with explicit parameters,
-separate optimization and plotting, examples and numerical checks. The author
-confirmed the source project, but the exact historical version used to produce
-the final paper figures is not known. This is a verified refactor of recovered
-functions, not a claim to have recovered that final production version or to
-have reproduced every published phase boundary.
+![Phase regions in the two flux subspaces](docs/phase_diagrams/phase_regions.png)
 
-This bond-order project is separate from the author's Affleck project.
-No Affleck source or result files are included.
+The phase-region maps above retain the classifications in the submitted
+figures. Calculated current, bond-amplitude and flux maps are provided
+separately below.
 
-## Phase-region overview
+## Model and conventions
 
-![Recovered author phase regions](docs/phase_diagrams/phase_regions.png)
+Four real bond currents $J_\nu$ describe links in the directions
+$(+x,+y,-x,-y)$. The effective hopping and two mean-field bands are
 
-This adds the missing categorical N/A-H region overview from the author's
-original submitted `Phase_diagram.pdf` and `Phase_diagram_theta2.pdf`.
-Each 20x20 categorical map was recovered from 400 visible vector cells,
-with the color-to-letter mapping checked at every original on-map phase
-letter. The two source figure hashes, coordinate grids and exact labels
-are saved in `docs/phase_diagrams/historical_regions/`. These are recovered
-historical figure regions, distinct from the newly optimized maps below.
-[Recovery provenance](docs/phase_diagrams/historical_regions/README.md).
+$$
+t_\nu=t+iVJ_\nu,\qquad
+E_\pm(\mathbf{k})=-4t'\cos k_x\cos k_y
+\pm\left|\sum_\nu t_\nu e^{i\mathbf{k}\cdot\mathbf{e}_\nu}\right|.
+$$
 
-```sh
-python -m examples.phase_regions
-```
+The energy per site includes the current cost
+$V\sum_\nu J_\nu^2/4$. The filling $\nu$ is the particle number per physical
+site, between 0 and 1. Currents are dimensionless; $t$, $t'$, $V$, band
+energies and chemical potential share one energy unit.
+A full square Brillouin-zone mesh is used with weight $1/2$ for each folded
+band entry.
 
-## New calculated order-parameter maps
+For $t>0$, the link phases are $\phi_\nu=\arctan(VJ_\nu/t)$ and the square
+flux is $\Phi=\phi_4-\phi_1+\phi_2-\phi_3$. Both the unconstrained flux
+ansatz and the $\Phi=0$ subspace can be optimized. The variational space
+contains loop currents; competing charge-density order is outside this ansatz.
 
-![Calculated bond-order and flux maps](docs/phase_diagrams/phase_diagram_comparison.png)
+## Installation and a single parameter point
 
-The figure compares ordinary and zero-square-flux subspaces at t=1, t'=0.2,
-with 19 fillings (.05 to .95), 20 interactions (.25 to 5), a 40x40 momentum
-mesh, canonical occupation and RLEX symmetry constraints. Each subspace has
-380 calculated parameter points. Color cells are not interpolated.
-
-The scans start with SHGO (256 Sobol samples, two iterations), followed by
-explicitly recorded admissible cross-subspace seeds, selected finer-grid
-seeds and neighbor continuation. Raw independent scans are preserved.
-The lower-energy feasible candidates are always evaluated at the actual
-parameter point; neighboring or finer-grid values are never copied in as
-interpolated energies. The audit includes the variational nesting check
-and 12 selected 60x60-mesh / 512-sample / three-iteration refinement checks.
-These are finite-grid maps, not certified phase boundaries or automatic
-recovery of the paper's A-H labels.
-
-[Four current maps, unrestricted square flux](docs/phase_diagrams/audited/unconstrained_order_parameters.png) |
-[Four current maps, zero square flux](docs/phase_diagrams/audited/zero_flux_order_parameters.png) |
-[Data and numerical audit](docs/phase_diagrams/README.md).
-
-Generate the paired scans, audited figures and refinement checks:
-
-```sh
-OPENBLAS_NUM_THREADS=1 python -m examples.phase_diagrams
-```
-
-To regenerate the versioned figures from their saved raw scans:
-
-```sh
-OPENBLAS_NUM_THREADS=1 python -m examples.phase_diagrams --plot-only --output docs/phase_diagrams
-```
-
-## Run
-
-Python 3.11 was used for validation. From this repository root:
+Python 3.11 is used for the numerical checks. From the repository root:
 
 ```sh
 python -m pip install -r requirements.txt
-OPENBLAS_NUM_THREADS=1 python -m unittest discover -s tests -v
-OPENBLAS_NUM_THREADS=1 python -m validation.run
-OPENBLAS_NUM_THREADS=1 python -m bond_order.cli one-point
+OPENBLAS_NUM_THREADS=1 python -m bond_order.cli one-point \
+  --occupation canonical --mesh 24 --samples 64 --iterations 1
 ```
 
-The default command uses mesh 24x24, t=1, t'=0.2, V=4, filling=0.4,
-64 Sobol samples and one SHGO iteration. These are small workflow settings,
-not publication convergence settings. It saves `one_point.json`, `bands.npz`
-and `bands.png` to `examples/output/`. The JSON records requested and actual
-filling, particle error, chemical potential, energy components, constraints,
-solver settings, every sector's status, and whether a solver candidate or
-the feasible zero-current baseline was selected.
+This example uses $t=1$, $t'=0.2$, $V=4$ and $\nu=0.4$ and writes the
+optimized currents, energy, solver diagnostics and band plots to
+`examples/output/`. These mesh and search settings are intended for a short
+example; convergence must be checked for a parameter study.
 
-For the zero-net-flux subspace:
+The zero-square-flux calculation is selected with:
 
 ```sh
-OPENBLAS_NUM_THREADS=1 python -m bond_order.cli one-point --zero-flux \
-  --occupation canonical --output examples/output/zero_flux
+OPENBLAS_NUM_THREADS=1 python -m bond_order.cli one-point \
+  --zero-flux --occupation canonical --output examples/output/zero_flux
 ```
 
-A small explicit sweep, saved incrementally:
+Figure export requires LaTeX with `latex`, `dvipng`, `type1cm`, `type1ec`,
+`amsmath` and `textcomp`. On Ubuntu install
+`texlive-latex-extra cm-super dvipng ghostscript`.
+
+## Phase-space scans and figures
+
+A small scan can be run as follows:
 
 ```sh
 OPENBLAS_NUM_THREADS=1 python -m bond_order.cli sweep \
@@ -103,117 +69,70 @@ OPENBLAS_NUM_THREADS=1 python -m bond_order.cli sweep \
   --mesh 24 --samples 64 --iterations 1 --output examples/output/sweep
 ```
 
-Completed two-dimensional sweeps also save `phase_diagram.png` and `.svg`.
-Use `--resume` to continue a compatible checkpoint; mismatched settings are
-rejected. Plot a saved scan without repeating optimization:
+`--resume` continues a scan with matching parameters. To redraw the stored
+figures in `docs/` without repeating optimization:
 
 ```sh
-python -m bond_order.cli plot-sweep --input examples/output/sweep/sweep.json \
-  --output examples/output/sweep
+python -m examples.replot_saved
 ```
 
-All sweeps are serial and run only when requested. No top-level fitting,
-optimization, multiprocessing, plotting or filesystem output occurs on
-import. Figure export uses the LaTeX tools documented below.
-Optionally install the package with `python -m pip install -e .` to use the
-`bond-order` command outside the repository root.
+![Current strength, bond ordering and square flux](docs/phase_diagrams/phase_diagram_comparison.png)
 
-## Model and preserved numerical behavior
+The saved calculations use $t=1$, $t'=0.2$, a $40\times40$ momentum mesh,
+$19$ fillings from $0.05$ to $0.95$, and $20$ interactions from $0.25$ to $5$.
+Each flux subspace contains 380 points. The plots show current strength,
+bond-amplitude anisotropy and square flux. The historical N/A–H phase labels
+are stored independently of these numerical order-parameter maps.
 
-The four real current expectations J1,...,J4 refer to (+x,+y,-x,-y).
-The model uses the paper's
+The paired calculations and their refinement checks can be regenerated with:
 
-```
-t_nu = t + i V J_nu
-E_+/- = -4 t' cos(kx) cos(ky) +/- |sum_nu t_nu exp(i k.e_nu)|
-energy_per_site = V/4 sum_nu J_nu^2 + electronic_energy_per_site
+```sh
+OPENBLAS_NUM_THREADS=1 python -m examples.phase_diagrams
 ```
 
-`FluxModel.bands` retains the author's algebraically expanded E1/E2
-expressions. `representation="complex"` gives the compact equivalent form,
-also checked against independent Hermitian matrix diagonalization. A full
-square Brillouin-zone mesh double counts the folded two-sublattice bands;
-each entry carries weight 1/2. Filling is particles per physical site in [0,1].
-Hopping, interaction, band energies and chemical potential use one common
-energy unit. Current expectations and filling are dimensionless.
+See [the phase-diagram data guide](docs/phase_diagrams/README.md) for scan
+settings, saved arrays and convergence checks, and
+[the phase-region data](docs/phase_diagrams/historical_regions/README.md)
+for the categorical maps.
 
-Two occupation modes are explicit:
+## Occupation and minimization
 
-* **`legacy` (default)** preserves the source's chemical-potential bisection,
-  bracket [-1000,1000], E<=mu rule, 99-iteration limit and particle-count
-  tolerance=3 (stopping tolerance is half that value). It precomputes the
-  bands instead of recomputing them at every bisection step. Actual filling
-  can differ from the target, especially at a degenerate shell; the difference
-  and convergence status are saved.
-* **`canonical`** is a separately labeled numerical improvement: sorted
-  levels and fractional occupation of the last entry enforce the requested
-  filling exactly on the discrete mesh. It can change finite-mesh objectives
-  and optimized currents. It must not be silently substituted when comparing
-  old output or claiming bit-for-bit reproduction of an old optimizer run.
+`--occupation canonical` fixes the particle number by fractional occupation
+of the last discrete level. `--occupation legacy`, the default, uses the
+source chemical-potential bisection and particle-count tolerance. The
+reported actual filling should be checked when using the latter, particularly
+at degenerate levels.
 
-Ordinary optimization defaults to the active RLEX constraints in the
-parallel source. Zero-flux optimization defaults to the three LEX sectors
-in the original zero-flux source, adding
-`phi4-phi1+phi2-phi3=0`, where `phi_nu=atan(V*J_nu/t)`. It requires t>0.
-`--symmetry rlex` or `--symmetry legacy_lex` makes the choice explicit.
-The historical zero-flux LEX functions include a 1e-5 slack, even in the
-J2-J1 equality; `legacy_lex` retains and reports it explicitly.
-The refactored solver uses documented Sobol sampling; the older zero-flux
-script's implicit SHGO defaults are retained only in the reference module.
-This is not an assertion of identical minimizer paths across versions.
+SHGO searches the selected symmetry sectors. Unconstrained calculations use
+RLEX sectors by default; the zero-flux calculation uses the original LEX
+sectors unless `--symmetry` is specified. The `legacy_lex` constraints retain
+the original $10^{-5}$ slack. Raw searches and subsequent feasible-seed
+refinements are saved separately. Mesh and search convergence are needed
+before interpreting a finite-grid boundary as a phase boundary.
 
-## Structure
+## Numerical checks
 
-| File | Responsibility |
-|---|---|
-| `bond_order/model.py` | Parameters, source band expressions, energy and flux |
-| `bond_order/occupation.py` | Legacy and canonical filling algorithms |
-| `bond_order/optimization.py` | SHGO, symmetry sectors, zero-flux constraint and solver diagnostics |
-| `bond_order/plotting.py` | Explicit LaTeX figure creation |
-| `bond_order/output.py` | Explicit JSON and numerical-array output |
-| `bond_order/cli.py` | One-point and explicit sweep commands |
-| `reference/` | Extracted original functions for comparison, with no top-level sweeps |
-| `validation/` | Executable checks and measured JSON report |
+```sh
+python -m unittest discover -s tests -v
+OPENBLAS_NUM_THREADS=1 python -m validation.run
+```
 
-## Evidence and scope
+The checks compare the expanded and complex-hopping band expressions,
+independent Hermitian diagonalization, folded-band counting, symmetry and
+occupation conventions. The phase-map audit also compares the energies in
+the nested variational spaces and selected finer meshes. Settings and
+residuals are recorded in [validation/report.json](validation/report.json)
+and [the scan audit](docs/phase_diagrams/audit.json).
 
-Four candidate source versions have identical E1/E2 function bodies but
-different meshes, parameters, constraints or optimizer calls. The active
-`parallel calculation_integral.py` candidate has t=1, t'=0.2, mesh 100x100
-and RLEX/Sobol SHGO; the separate zero-flux candidate has the corresponding
-three-sector constrained search. Neither is asserted to be the final version.
-[The source audit](docs/source_audit.md) and
-[source fingerprints](docs/source_manifest.json) record the selection.
+The figures use the shared [publication style](docs/figure_style.md).
+Source and numerical details are collected in [docs/](docs/source_audit.md).
+The independent [Affleck project](https://github.com/lyfstefan/1988_Affleck)
+uses a separate model and dataset.
 
-At the validation points, the refactored bands agree with both recovered
-references exactly in the tested environment, and the legacy-mode total
-energies differ by at most 2.3e-16. Independent checks cover Hermitian
-diagonalization, symmetry, folded counting, a known free-lattice continuum
-energy, the RLEX region, and an occupation-degeneracy example. Small SHGO
-runs exercise legacy/canonical filling and ordinary/zero-flux subspaces. The
-versioned phase-map scans and their separate audit extend that bounded check
-to the stated parameter grid; they do not identify historical figure versions.
-See `validation/report.json` for all settings and results; this is bounded
-evidence, not a universal equivalence or global-minimum certificate.
+## Reference
 
-The calculations stay within the **loop-current mean-field ansatz**. There is
-no CDW or other-order competition and no claim of the complete many-body
-ground-state phase diagram. Existing adjacent exploratory CDW/three-band
-programs and unverified historical plot outputs are not included. Published
-phase labels are not inferred automatically from small example runs.
-
-Use `citation.bib` or `CITATION.cff` to cite the associated paper.
-
-## Generated example
-
-![Refactored four-current calculation, small-mesh example](docs/bands.png)
-
-## Figure exports
-
-Figures follow [publication style v1](docs/figure_style.md): real LaTeX text
-and mathematics, Computer Modern fonts, 10/9 pt typography, and compact figures
-with approximately 2.5 cm square data frames, reference-matched typography,
-and independent short, bottom-aligned colorbars labeled above. PDF, 300 dpi PNG,
-SVG and typography records accompany every figure. Plotting now requires
-a LaTeX installation; model evaluation and optimization remain independent
-of the plotting toolchain.
+Yifan Liu and Vivek Aji, “Bond ordering in flux phases of interacting spinless
+fermions on the square lattice,” *Phys. Rev. B* **113**, 045140 (2026).
+[DOI:10.1103/3jqj-28q7](https://doi.org/10.1103/3jqj-28q7) ·
+[arXiv:2402.09577](https://arxiv.org/abs/2402.09577).
+BibTeX and citation metadata are provided in `citation.bib` and `CITATION.cff`.

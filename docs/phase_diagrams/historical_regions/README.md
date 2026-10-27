@@ -1,35 +1,41 @@
-# Recovered original phase-region maps
+# Categorical phase-region data
 
-The author-submitted figures `Phase_diagram.pdf` and
-`Phase_diagram_theta2.pdf` each contain a visible 20x20 grid of vector
-rectangles. All 800 cells were recovered directly from those PDF objects,
-without raster sampling, interpolation, new minimization or new phase
-classification. Palette-to-letter mappings were independently verified
-at every original on-map A-H/N annotation.
+The JSON files store the N/A–H phase regions in the submitted figures for
+the four-current model at $t=1$ and $t'=0.2$.
 
-The JSON files record source SHA-256 fingerprints, exact phase labels,
-cell counts and the recovered coordinate grid. The unconstrained figure
-uses filling 0..1 and V/t 0..5; the zero-flux figure uses filling 0..1 and
-V/t 2..5. The original zero-flux script independently confirms this range.
-Parameters are t=1 and t'=0.2, as recorded by the accompanying manuscript.
+| File | Square-flux constraint | Filling | $V/t$ | Grid |
+| --- | --- | --- | --- | --- |
+| `unconstrained.json` | None | 0–1 | 0–5 | $20\times20$ |
+| `zero_flux.json` | Zero square flux | 0–1 | 2–5 | $20\times20$ |
 
-These are historical *plotted classifications*. The old research script
-notes that boundaries needed hand adjustments after inspecting currents.
-Recovering its figure cells does not recover or certify the historical
-optimizer outputs. No cells were adjusted or smoothed during this recovery.
-They are deliberately separate from the 2026 finite-mesh optimization
-results in `../audited/`, which have no automatically assigned A-H labels.
+Each record contains the coordinate grid, phase labels, phase counts and
+the SHA-256 checksum of its source figure. The 800 labels were read directly
+from the visible vector cells in `Phase_diagram.pdf` and
+`Phase_diagram_theta2.pdf`. The color-to-phase correspondence was checked
+at the letter annotations in both figures.
 
-`phase_regions.png/pdf/svg` compares the two subspaces. Individual compact
-square maps are provided as `phase_regions_unconstrained.*` and
-`phase_regions_zero_flux.*`. Labels and colors have the same correspondence
-in all three exports; all text is rendered by LaTeX.
+These files preserve the plotted phase classification, including the
+boundaries chosen in those figures. They do not contain the underlying
+optimized currents. The numerical current and flux scans are stored
+separately in [../audited/](../audited/).
 
-To repeat the recovery with the original author figures available locally,
-install the optional `pymupdf` dependency and run:
+## Plot the region maps
+
+From the repository root:
 
 ```sh
+python -m examples.phase_regions
+```
+
+This exports the combined phase-region figure and the two individual maps
+under `docs/phase_diagrams/`.
+
+To extract the labels again from locally available source figures:
+
+```sh
+python -m pip install pymupdf
 python -m examples.recover_historical_regions --source /path/to/original/figures
 ```
 
-No original absolute filesystem paths or original figure PDFs are bundled.
+The extraction preserves the cell labels and does not perform minimization,
+reclassification or boundary smoothing.
