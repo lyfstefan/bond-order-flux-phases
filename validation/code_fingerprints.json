@@ -7,7 +7,7 @@
   "bond_order/output.py": "f0d3ec8bcc3a6a24b8360038ea01e700ae464f550b8315b32a56bdddde728d16",
   "bond_order/phase_regions.py": "5519b61f8d3cb479d4add49ef811eae9a2dd6061d905e49dbe5457865387a662",
   "bond_order/plotting.py": "7fbb2f894ab8223c580b654a7d3b5961178fdf9608539ebd468a15af8a69da1c",
-  "bond_order/publication_style.py": "eeb59075fd52bf876c4df77013186f8ca32c37c9dbd38fba31d6bb7c53877442",
+  "bond_order/publication_style.py": "6d98deffa4421a22ada4215654fa8eb508f1b111ebab267b1dead3808206c26b",
   "examples/phase_diagrams.py": "2e973fe7e6edb13063a33d33c018fc9b9d6fd39490018196a872dd2cb94dca82",
   "examples/phase_regions.py": "4651498aa021977096ef662a4437f4d62b33d91266158b3aa207d85590591295",
   "examples/recover_historical_regions.py": "2cd840c1a9d60342d3c74aa278b3789523c4a8d8e98ac59ee23820ae4814f27f",
