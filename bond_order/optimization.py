@@ -1,6 +1,6 @@
 """SHGO and source symmetry/zero-flux constraints, without top-level sweeps."""
 import numpy as np
-from scipy.optimize import shgo
+from scipy.optimize import shgo,minimize
 
 
 def rlex_values(j):
@@ -74,3 +74,28 @@ def solve(model,filling,zero_flux=False,samples=256,iterations=2,symmetry=None):
             "square_flux":model.square_flux(best_j) if model.t>0 else None,
             "selected":"solver candidate" if improved else "zero-current baseline",
             "solver_candidates":candidates,"any_feasible_solver_candidate":any(c["feasible"] for c in candidates)}
+
+
+def refine_from_seed(model,filling,seed,zero_flux=False):
+    """RLEX-constrained local refinement of a known feasible candidate.
+
+    Keep the seed if refinement fails or increases the energy. This exposes
+    additional candidate searches explicitly; it is not a global certificate.
+    """
+    seed=model.currents(seed)
+    bounds=[(-1,0),(-1,1),(-1,1),(-1,1)]
+    constraints=[{"type":"ineq","fun":rlex_values}]
+    if zero_flux:constraints.append({"type":"eq","fun":model.square_flux})
+    def feasible(j):
+        return (np.isfinite(j).all() and -1-1e-6<=j[0]<=1e-6 and np.max(abs(j[1:]))<=1+1e-6
+                and np.min(rlex_values(j))>=-1e-6
+                and (not zero_flux or abs(model.square_flux(j))<=1e-6))
+    if not feasible(seed):raise ValueError("refinement seed must satisfy the requested constraints")
+    result=minimize(lambda j:model.energy(j,filling),seed,method="SLSQP",bounds=bounds,
+                    constraints=constraints,options={"ftol":1e-12,"maxiter":1000})
+    selected=seed
+    if feasible(result.x) and model.energy(result.x,filling)<model.energy(seed,filling):selected=result.x
+    return {"currents":selected.tolist(),**model.evaluate(selected,filling),
+            "square_flux":model.square_flux(selected),"local_success":bool(result.success),
+            "local_message":str(result.message),"seed_energy":float(model.energy(seed,filling)),
+            "selected":"local refinement" if not np.array_equal(selected,seed) else "feasible seed"}

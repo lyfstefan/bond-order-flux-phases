@@ -1,0 +1,1930 @@
+{
+  "method": "Independent SHGO scans; admissible cross-subspace seeds; selected 60x60 seeds reevaluated on 40x40; forward/backward neighboring phase-preserving seeds with SLSQP. Raw independent scan files retained unchanged.",
+  "points_per_subspace": 380,
+  "initial_unrestricted_energy_above_restricted_gt_1e_minus7": 34,
+  "max_initial_variational_violation": 0.0010587777236316653,
+  "max_final_variational_violation": 1.0504930259003231e-12,
+  "candidate_updates": [
+    {
+      "interaction": 0.25,
+      "filling": 0.65,
+      "subspace": "unconstrained",
+      "previous_energy": -0.7062138859636596,
+      "new_energy": -0.7062138938423417,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 1.25,
+      "filling": 0.4,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8407214533274197,
+      "new_energy": -0.8407219069108222,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 1.5,
+      "filling": 0.65,
+      "subspace": "unconstrained",
+      "previous_energy": -0.7062138834607082,
+      "new_energy": -0.7062147342874515,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 1.5,
+      "filling": 0.85,
+      "subspace": "unconstrained",
+      "previous_energy": -0.39819096530839315,
+      "new_energy": -0.39819121597261575,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 1.75,
+      "filling": 0.35,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8261951325974104,
+      "new_energy": -0.8261951356100952,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 1.75,
+      "filling": 0.7,
+      "subspace": "zero_flux",
+      "previous_energy": -0.6494030783749154,
+      "new_energy": -0.6494056321703451,
+      "source": "unconstrained scan, already zero flux",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.0,
+      "filling": 0.15,
+      "subspace": "unconstrained",
+      "previous_energy": -0.5410844436611829,
+      "new_energy": -0.5410844595426665,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.0,
+      "filling": 0.25,
+      "subspace": "unconstrained",
+      "previous_energy": -0.73466564361915,
+      "new_energy": -0.7346656801595938,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.0,
+      "filling": 0.7,
+      "subspace": "unconstrained",
+      "previous_energy": -0.6494074939015194,
+      "new_energy": -0.6494075609873721,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.0,
+      "filling": 0.8,
+      "subspace": "unconstrained",
+      "previous_energy": -0.49666755622435277,
+      "new_energy": -0.49668306635331644,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.25,
+      "filling": 0.2,
+      "subspace": "unconstrained",
+      "previous_energy": -0.6518895491921284,
+      "new_energy": -0.6518910762589747,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.5,
+      "filling": 0.3,
+      "subspace": "unconstrained",
+      "previous_energy": -0.7916027236045632,
+      "new_energy": -0.7916128390665594,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.5,
+      "filling": 0.7,
+      "subspace": "unconstrained",
+      "previous_energy": -0.6538014190775134,
+      "new_energy": -0.6538060377519828,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.5,
+      "filling": 0.75,
+      "subspace": "unconstrained",
+      "previous_energy": -0.5817681354187343,
+      "new_energy": -0.5818191961548865,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.75,
+      "filling": 0.15,
+      "subspace": "unconstrained",
+      "previous_energy": -0.5410832464730156,
+      "new_energy": -0.5410852176829533,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.75,
+      "filling": 0.75,
+      "subspace": "unconstrained",
+      "previous_energy": -0.5871954218760433,
+      "new_energy": -0.5872052348574994,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.75,
+      "filling": 0.8,
+      "subspace": "unconstrained",
+      "previous_energy": -0.49834824697120067,
+      "new_energy": -0.49834917821239144,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.75,
+      "filling": 0.85,
+      "subspace": "unconstrained",
+      "previous_energy": -0.39819004409761605,
+      "new_energy": -0.3981921925351159,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.0,
+      "filling": 0.05,
+      "subspace": "unconstrained",
+      "previous_energy": -0.21856971188374466,
+      "new_energy": -0.21856978845848257,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.0,
+      "filling": 0.1,
+      "subspace": "unconstrained",
+      "previous_energy": -0.39755741778800235,
+      "new_energy": -0.39755976153767913,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.0,
+      "filling": 0.35,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8326370848065597,
+      "new_energy": -0.8326492949419649,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.0,
+      "filling": 0.75,
+      "subspace": "unconstrained",
+      "previous_energy": -0.5954730405226323,
+      "new_energy": -0.5954742566831088,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.0,
+      "filling": 0.85,
+      "subspace": "zero_flux",
+      "previous_energy": -0.3982082049339495,
+      "new_energy": -0.3982354216339955,
+      "source": "unconstrained scan, already zero flux",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.25,
+      "filling": 0.05,
+      "subspace": "zero_flux",
+      "previous_energy": -0.21856987346671408,
+      "new_energy": -0.21856989619263834,
+      "source": "unconstrained scan, already zero flux",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.25,
+      "filling": 0.1,
+      "subspace": "unconstrained",
+      "previous_energy": -0.39755741778800235,
+      "new_energy": -0.39755995685038187,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.25,
+      "filling": 0.35,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8450963101361328,
+      "new_energy": -0.8450992760920122,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.25,
+      "filling": 0.85,
+      "subspace": "unconstrained",
+      "previous_energy": -0.3994638195505459,
+      "new_energy": -0.39949047143414934,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.5,
+      "filling": 0.3,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8103944284495852,
+      "new_energy": -0.8103954047464215,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.5,
+      "filling": 0.85,
+      "subspace": "unconstrained",
+      "previous_energy": -0.4021897549259299,
+      "new_energy": -0.4021928280443631,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.75,
+      "filling": 0.05,
+      "subspace": "zero_flux",
+      "previous_energy": -0.21856950783075285,
+      "new_energy": -0.21857011166094956,
+      "source": "unconstrained scan, already zero flux",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.75,
+      "filling": 0.3,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8235718807949315,
+      "new_energy": -0.8235750755924646,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.75,
+      "filling": 0.75,
+      "subspace": "zero_flux",
+      "previous_energy": -0.6323102892342254,
+      "new_energy": -0.6323104659335853,
+      "source": "unconstrained scan, already zero flux",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.0,
+      "filling": 0.3,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8391326704630515,
+      "new_energy": -0.8391353453644935,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.0,
+      "filling": 0.85,
+      "subspace": "unconstrained",
+      "previous_energy": -0.41059302309781637,
+      "new_energy": -0.41059302322951874,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.25,
+      "filling": 0.3,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8566524761646468,
+      "new_energy": -0.8566563823726607,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.25,
+      "filling": 0.35,
+      "subspace": "unconstrained",
+      "previous_energy": -0.9372701013980362,
+      "new_energy": -0.937272508847906,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.25,
+      "filling": 0.9,
+      "subspace": "unconstrained",
+      "previous_energy": -0.2831519158671882,
+      "new_energy": -0.2838403382164936,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.5,
+      "filling": 0.35,
+      "subspace": "unconstrained",
+      "previous_energy": -0.9656349535670654,
+      "new_energy": -0.9656713262772104,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.5,
+      "filling": 0.85,
+      "subspace": "unconstrained",
+      "previous_energy": -0.4222006089724103,
+      "new_energy": -0.42221539990513146,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.5,
+      "filling": 0.9,
+      "subspace": "unconstrained",
+      "previous_energy": -0.2844458347495446,
+      "new_energy": -0.2849812213082938,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.75,
+      "filling": 0.05,
+      "subspace": "unconstrained",
+      "previous_energy": -0.21857122947883556,
+      "new_energy": -0.21857133459626374,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.75,
+      "filling": 0.35,
+      "subspace": "unconstrained",
+      "previous_energy": -0.9953895461506772,
+      "new_energy": -0.9953906560962104,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.75,
+      "filling": 0.9,
+      "subspace": "unconstrained",
+      "previous_energy": -0.2855862478341063,
+      "new_energy": -0.28664502555773796,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 5.0,
+      "filling": 0.25,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8167361958852322,
+      "new_energy": -0.8167480706304533,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 5.0,
+      "filling": 0.3,
+      "subspace": "unconstrained",
+      "previous_energy": -0.9180410181341507,
+      "new_energy": -0.9180429038767769,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 5.0,
+      "filling": 0.75,
+      "subspace": "unconstrained",
+      "previous_energy": -0.7186097853866943,
+      "new_energy": -0.718610007301925,
+      "source": "zero-flux SHGO scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.0,
+      "filling": 0.4,
+      "subspace": "unconstrained",
+      "previous_energy": -0.9817980575424679,
+      "new_energy": -0.9919805506366348,
+      "source": "independent 60x60 refinement seed, reevaluated at 40x40",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 0.75,
+      "filling": 0.6,
+      "subspace": "unconstrained",
+      "previous_energy": -0.7532245806521546,
+      "new_energy": -0.7532246858572361,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 1.25,
+      "filling": 0.55,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8192801505115201,
+      "new_energy": -0.8192843248183166,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 1.25,
+      "filling": 0.55,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8192843248183166,
+      "new_energy": -0.8192858549502198,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 1.5,
+      "filling": 0.6,
+      "subspace": "unconstrained",
+      "previous_energy": -0.7745518534984255,
+      "new_energy": -0.7745532962346438,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 1.75,
+      "filling": 0.45,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8588434876563869,
+      "new_energy": -0.8588435313537306,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.0,
+      "filling": 0.4,
+      "subspace": "unconstrained",
+      "previous_energy": -0.840727339293612,
+      "new_energy": -0.8407273403671575,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.0,
+      "filling": 0.6,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8029717062231996,
+      "new_energy": -0.8029718829499882,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.25,
+      "filling": 0.45,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8984151853390262,
+      "new_energy": -0.8984157434960607,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.25,
+      "filling": 0.75,
+      "subspace": "unconstrained",
+      "previous_energy": -0.5802137028185611,
+      "new_energy": -0.5802144128081692,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.5,
+      "filling": 0.45,
+      "subspace": "unconstrained",
+      "previous_energy": -0.9210150686048668,
+      "new_energy": -0.9210169211367378,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.5,
+      "filling": 0.55,
+      "subspace": "unconstrained",
+      "previous_energy": -0.9195014044467413,
+      "new_energy": -0.9195017374751809,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.5,
+      "filling": 0.7,
+      "subspace": "unconstrained",
+      "previous_energy": -0.6538060377519828,
+      "new_energy": -0.6538364068457551,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.5,
+      "filling": 0.75,
+      "subspace": "unconstrained",
+      "previous_energy": -0.5818191961548865,
+      "new_energy": -0.5818204920924959,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.75,
+      "filling": 0.95,
+      "subspace": "unconstrained",
+      "previous_energy": -0.1506081910522868,
+      "new_energy": -0.15060857715171042,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.0,
+      "filling": 0.35,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8326492949419649,
+      "new_energy": -0.8328934142596012,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.0,
+      "filling": 0.4,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8862250059173312,
+      "new_energy": -0.8862259780659948,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.0,
+      "filling": 0.45,
+      "subspace": "unconstrained",
+      "previous_energy": -0.9707040365506621,
+      "new_energy": -0.9707138029457898,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.25,
+      "filling": 0.55,
+      "subspace": "unconstrained",
+      "previous_energy": -0.9974147323439563,
+      "new_energy": -0.997570565370168,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.25,
+      "filling": 0.55,
+      "subspace": "unconstrained",
+      "previous_energy": -0.997570565370168,
+      "new_energy": -0.9975716097419576,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.25,
+      "filling": 0.7,
+      "subspace": "unconstrained",
+      "previous_energy": -0.700771998166889,
+      "new_energy": -0.700773575682162,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.5,
+      "filling": 0.3,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8103954047464215,
+      "new_energy": -0.8103957408644513,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.5,
+      "filling": 0.7,
+      "subspace": "unconstrained",
+      "previous_energy": -0.7216029307986818,
+      "new_energy": -0.721604388019426,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.75,
+      "filling": 0.35,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8857034005424067,
+      "new_energy": -0.8857266956710004,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.75,
+      "filling": 0.45,
+      "subspace": "unconstrained",
+      "previous_energy": -1.0534232263849934,
+      "new_energy": -1.0534295271860694,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.75,
+      "filling": 0.65,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8663846335937627,
+      "new_energy": -0.8664021319091177,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.0,
+      "filling": 0.05,
+      "subspace": "unconstrained",
+      "previous_energy": -0.2185702020610632,
+      "new_energy": -0.21857021939510515,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.0,
+      "filling": 0.4,
+      "subspace": "unconstrained",
+      "previous_energy": -0.9919805506366348,
+      "new_energy": -0.9919832608268929,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.0,
+      "filling": 0.45,
+      "subspace": "unconstrained",
+      "previous_energy": -1.0917661061432649,
+      "new_energy": -1.0917779828368972,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.0,
+      "filling": 0.55,
+      "subspace": "unconstrained",
+      "previous_energy": -1.1089241204285658,
+      "new_energy": -1.108927281018358,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.0,
+      "filling": 0.9,
+      "subspace": "unconstrained",
+      "previous_energy": -0.2831509068243836,
+      "new_energy": -0.2832070724943175,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.25,
+      "filling": 0.4,
+      "subspace": "unconstrained",
+      "previous_energy": -1.0170607306623067,
+      "new_energy": -1.0241683851898955,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.25,
+      "filling": 0.6,
+      "subspace": "unconstrained",
+      "previous_energy": -1.0515545490708669,
+      "new_energy": -1.0515561483847915,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.25,
+      "filling": 0.65,
+      "subspace": "unconstrained",
+      "previous_energy": -0.923125853053884,
+      "new_energy": -0.9232516555665001,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.25,
+      "filling": 0.85,
+      "subspace": "unconstrained",
+      "previous_energy": -0.416005150952542,
+      "new_energy": -0.41600526744727584,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.5,
+      "filling": 0.1,
+      "subspace": "unconstrained",
+      "previous_energy": -0.39756032981558814,
+      "new_energy": -0.3975609334129936,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.5,
+      "filling": 0.4,
+      "subspace": "unconstrained",
+      "previous_energy": -1.0574771382708157,
+      "new_energy": -1.0575098870968724,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.5,
+      "filling": 0.7,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8166813476588599,
+      "new_energy": -0.816687962231095,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.75,
+      "filling": 0.55,
+      "subspace": "unconstrained",
+      "previous_energy": -1.2373989010267357,
+      "new_energy": -1.2374060061629095,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.75,
+      "filling": 0.65,
+      "subspace": "unconstrained",
+      "previous_energy": -0.9852485328158203,
+      "new_energy": -0.9852505469111629,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.75,
+      "filling": 0.7,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8105012782531187,
+      "new_energy": -0.8427056725148654,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.75,
+      "filling": 0.7,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8427056725148654,
+      "new_energy": -0.8427058266334772,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.75,
+      "filling": 0.75,
+      "subspace": "unconstrained",
+      "previous_energy": -0.6996666692120039,
+      "new_energy": -0.6996719453733852,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 5.0,
+      "filling": 0.3,
+      "subspace": "unconstrained",
+      "previous_energy": -0.9180429038767769,
+      "new_energy": -0.9180429241428909,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 5.0,
+      "filling": 0.35,
+      "subspace": "unconstrained",
+      "previous_energy": -1.0262085386124107,
+      "new_energy": -1.0262123276899682,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 5.0,
+      "filling": 0.65,
+      "subspace": "unconstrained",
+      "previous_energy": -1.0180774551588654,
+      "new_energy": -1.0180837193781236,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 5.0,
+      "filling": 0.7,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8352780866105984,
+      "new_energy": -0.8693278914404958,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 5.0,
+      "filling": 0.9,
+      "subspace": "unconstrained",
+      "previous_energy": -0.288652843537125,
+      "new_energy": -0.28865815136130035,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.75,
+      "filling": 0.65,
+      "subspace": "unconstrained",
+      "previous_energy": -0.9852505469111629,
+      "new_energy": -0.9852703298817821,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.75,
+      "filling": 0.4,
+      "subspace": "unconstrained",
+      "previous_energy": -1.0918919987820757,
+      "new_energy": -1.0920464915637562,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.75,
+      "filling": 0.2,
+      "subspace": "unconstrained",
+      "previous_energy": -0.6795973103507319,
+      "new_energy": -0.6795995317525567,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.5,
+      "filling": 0.65,
+      "subspace": "unconstrained",
+      "previous_energy": -0.9531297882570049,
+      "new_energy": -0.9531662994078083,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.5,
+      "filling": 0.4,
+      "subspace": "unconstrained",
+      "previous_energy": -1.0575098870968724,
+      "new_energy": -1.057556280502268,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.0,
+      "filling": 0.9,
+      "subspace": "unconstrained",
+      "previous_energy": -0.2832070724943175,
+      "new_energy": -0.2832203490514639,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.0,
+      "filling": 0.6,
+      "subspace": "unconstrained",
+      "previous_energy": -1.0163823651053803,
+      "new_energy": -1.0163927590486646,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.5,
+      "filling": 0.4,
+      "subspace": "unconstrained",
+      "previous_energy": -0.9286034271996775,
+      "new_energy": -0.9326946474634682,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.0,
+      "filling": 0.7,
+      "subspace": "unconstrained",
+      "previous_energy": -0.6821011221646603,
+      "new_energy": -0.6821132237032765,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.0,
+      "filling": 0.6,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8875367033318021,
+      "new_energy": -0.8876568701692965,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.0,
+      "filling": 0.6,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8876568701692965,
+      "new_energy": -0.8876708121907793,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.5,
+      "filling": 0.4,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8503815277090734,
+      "new_energy": -0.8505072786050458,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.25,
+      "filling": 0.3,
+      "subspace": "unconstrained",
+      "previous_energy": -0.7915927221340441,
+      "new_energy": -0.7915984666754181,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.0,
+      "filling": 0.65,
+      "subspace": "unconstrained",
+      "previous_energy": -0.7197882330903399,
+      "new_energy": -0.7198023605743465,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 1.75,
+      "filling": 0.6,
+      "subspace": "unconstrained",
+      "previous_energy": -0.7874701269150184,
+      "new_energy": -0.787474570641249,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 1.75,
+      "filling": 0.45,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8588435313537306,
+      "new_energy": -0.8588435797436484,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 0.75,
+      "filling": 0.7,
+      "subspace": "unconstrained",
+      "previous_energy": -0.6493977687317403,
+      "new_energy": -0.6493979169022382,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 0.75,
+      "filling": 0.6,
+      "subspace": "unconstrained",
+      "previous_energy": -0.7532246858572361,
+      "new_energy": -0.7532249619223638,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 1.75,
+      "filling": 0.4,
+      "subspace": "zero_flux",
+      "previous_energy": -0.8407240632182525,
+      "new_energy": -0.8407253677680342,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.0,
+      "filling": 0.4,
+      "subspace": "zero_flux",
+      "previous_energy": -0.8407251413719671,
+      "new_energy": -0.8407273403671568,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.25,
+      "filling": 0.4,
+      "subspace": "zero_flux",
+      "previous_energy": -0.8407262195256732,
+      "new_energy": -0.8407293129662776,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.25,
+      "filling": 0.75,
+      "subspace": "zero_flux",
+      "previous_energy": -0.5802128228518265,
+      "new_energy": -0.5802144128081692,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.5,
+      "filling": 0.75,
+      "subspace": "zero_flux",
+      "previous_energy": -0.5818191961548865,
+      "new_energy": -0.5818204920927487,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.75,
+      "filling": 0.3,
+      "subspace": "zero_flux",
+      "previous_energy": -0.7916116580016751,
+      "new_energy": -0.7916272114577069,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.75,
+      "filling": 0.95,
+      "subspace": "zero_flux",
+      "previous_energy": -0.15060819105228965,
+      "new_energy": -0.15060857715170994,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.0,
+      "filling": 0.35,
+      "subspace": "zero_flux",
+      "previous_energy": -0.8326483926108018,
+      "new_energy": -0.8328931978445692,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.25,
+      "filling": 0.6,
+      "subspace": "zero_flux",
+      "previous_energy": -0.8365458532685299,
+      "new_energy": -0.8365530847016442,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.5,
+      "filling": 0.05,
+      "subspace": "zero_flux",
+      "previous_energy": -0.21856944035202644,
+      "new_energy": -0.21857000392679385,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.5,
+      "filling": 0.3,
+      "subspace": "zero_flux",
+      "previous_energy": -0.8103948345659988,
+      "new_energy": -0.8103957249209859,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.5,
+      "filling": 0.7,
+      "subspace": "zero_flux",
+      "previous_energy": -0.7046683493898884,
+      "new_energy": -0.7046826625188225,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.5,
+      "filling": 0.75,
+      "subspace": "zero_flux",
+      "previous_energy": -0.6185210097453755,
+      "new_energy": -0.6185243626544342,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.5,
+      "filling": 0.85,
+      "subspace": "zero_flux",
+      "previous_energy": -0.4021925736606787,
+      "new_energy": -0.40219282804436385,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.75,
+      "filling": 0.2,
+      "subspace": "zero_flux",
+      "previous_energy": -0.6534758772628088,
+      "new_energy": -0.6534896546984799,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.75,
+      "filling": 0.3,
+      "subspace": "zero_flux",
+      "previous_energy": -0.8235750526708292,
+      "new_energy": -0.8235750555926381,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.75,
+      "filling": 0.4,
+      "subspace": "zero_flux",
+      "previous_energy": -0.9417734426074845,
+      "new_energy": -0.9417739355396963,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.75,
+      "filling": 0.6,
+      "subspace": "zero_flux",
+      "previous_energy": -0.8973645026504111,
+      "new_energy": -0.8973706681545446,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.0,
+      "filling": 0.05,
+      "subspace": "zero_flux",
+      "previous_energy": -0.21856957530956192,
+      "new_energy": -0.218570219395105,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.0,
+      "filling": 0.9,
+      "subspace": "zero_flux",
+      "previous_energy": -0.28315090682437943,
+      "new_energy": -0.28320707249431815,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.25,
+      "filling": 0.4,
+      "subspace": "zero_flux",
+      "previous_energy": -1.0066544170506182,
+      "new_energy": -1.006654734520569,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.25,
+      "filling": 0.6,
+      "subspace": "zero_flux",
+      "previous_energy": -0.9650604716392649,
+      "new_energy": -0.9650634591417706,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.25,
+      "filling": 0.85,
+      "subspace": "zero_flux",
+      "previous_energy": -0.41600226078840963,
+      "new_energy": -0.4160052674472867,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.5,
+      "filling": 0.1,
+      "subspace": "zero_flux",
+      "previous_energy": -0.39756032981582445,
+      "new_energy": -0.3975609334129959,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.5,
+      "filling": 0.6,
+      "subspace": "zero_flux",
+      "previous_energy": -1.000532235465719,
+      "new_energy": -1.000558650043953,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.75,
+      "filling": 0.3,
+      "subspace": "zero_flux",
+      "previous_energy": -0.8963401399905708,
+      "new_energy": -0.8963423360374951,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.75,
+      "filling": 0.45,
+      "subspace": "zero_flux",
+      "previous_energy": -1.1787349747817208,
+      "new_energy": -1.1787364234728426,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.75,
+      "filling": 0.75,
+      "subspace": "zero_flux",
+      "previous_energy": -0.699666669212023,
+      "new_energy": -0.6996719453733815,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.75,
+      "filling": 0.8,
+      "subspace": "zero_flux",
+      "previous_energy": -0.5705340850984084,
+      "new_energy": -0.5705379415750063,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 5.0,
+      "filling": 0.2,
+      "subspace": "zero_flux",
+      "previous_energy": -0.6896443374819471,
+      "new_energy": -0.6896481501996922,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 5.0,
+      "filling": 0.3,
+      "subspace": "zero_flux",
+      "previous_energy": -0.918042885398643,
+      "new_energy": -0.9180428877728859,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 5.0,
+      "filling": 0.7,
+      "subspace": "zero_flux",
+      "previous_energy": -0.835278086610605,
+      "new_energy": -0.8352888596213741,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 5.0,
+      "filling": 0.9,
+      "subspace": "zero_flux",
+      "previous_energy": -0.2869515875144974,
+      "new_energy": -0.2886581513613912,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.75,
+      "filling": 0.2,
+      "subspace": "zero_flux",
+      "previous_energy": -0.6795967335989074,
+      "new_energy": -0.6795968816740989,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.25,
+      "filling": 0.6,
+      "subspace": "zero_flux",
+      "previous_energy": -0.9650634591417706,
+      "new_energy": -0.9650704580044646,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.0,
+      "filling": 0.9,
+      "subspace": "zero_flux",
+      "previous_energy": -0.28320707249431815,
+      "new_energy": -0.2832236129796806,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.75,
+      "filling": 0.4,
+      "subspace": "zero_flux",
+      "previous_energy": -0.9417739355396963,
+      "new_energy": -0.9417923162761224,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.5,
+      "filling": 0.4,
+      "subspace": "zero_flux",
+      "previous_energy": -0.9124133541096415,
+      "new_energy": -0.9124521569877058,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.25,
+      "filling": 0.35,
+      "subspace": "zero_flux",
+      "previous_energy": -0.8450965386775302,
+      "new_energy": -0.8451026082010246,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.75,
+      "filling": 0.7,
+      "subspace": "zero_flux",
+      "previous_energy": -0.66232484911779,
+      "new_energy": -0.6623289409893782,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.5,
+      "filling": 0.8,
+      "subspace": "zero_flux",
+      "previous_energy": -0.49676960752000604,
+      "new_energy": -0.4967714900708794,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.5,
+      "filling": 0.7,
+      "subspace": "zero_flux",
+      "previous_energy": -0.6538060377519828,
+      "new_energy": -0.6538677218841099,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.25,
+      "filling": 0.55,
+      "subspace": "zero_flux",
+      "previous_energy": -0.7912788815273539,
+      "new_energy": -0.7912789245440709,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.25,
+      "filling": 0.3,
+      "subspace": "zero_flux",
+      "previous_energy": -0.7915927221340846,
+      "new_energy": -0.791598466675418,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 1.75,
+      "filling": 0.65,
+      "subspace": "zero_flux",
+      "previous_energy": -0.7062228938082653,
+      "new_energy": -0.7062231825635037,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 0.75,
+      "filling": 0.7,
+      "subspace": "zero_flux",
+      "previous_energy": -0.6493977687317513,
+      "new_energy": -0.6493979169022381,
+      "source": "neighbor continuation at target nu,V",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.5,
+      "filling": 0.7,
+      "subspace": "unconstrained",
+      "previous_energy": -0.6538364068457551,
+      "new_energy": -0.6538677218841099,
+      "source": "zero-flux continuation scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 2.5,
+      "filling": 0.8,
+      "subspace": "unconstrained",
+      "previous_energy": -0.49676960751997207,
+      "new_energy": -0.4967714900708794,
+      "source": "zero-flux continuation scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 3.25,
+      "filling": 0.35,
+      "subspace": "unconstrained",
+      "previous_energy": -0.8450992760920122,
+      "new_energy": -0.8451026082010246,
+      "source": "zero-flux continuation scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.0,
+      "filling": 0.9,
+      "subspace": "unconstrained",
+      "previous_energy": -0.2832203490514639,
+      "new_energy": -0.2832236129796806,
+      "source": "zero-flux continuation scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    },
+    {
+      "interaction": 4.75,
+      "filling": 0.8,
+      "subspace": "unconstrained",
+      "previous_energy": -0.5705359491598798,
+      "new_energy": -0.5705379415750063,
+      "source": "zero-flux continuation scan",
+      "local_success": true,
+      "local_message": "Optimization terminated successfully"
+    }
+  ],
+  "selected_point_refinement_checks": [
+    {
+      "filling": 0.3,
+      "interaction": 2.0,
+      "subspace": "unconstrained",
+      "coarse_mesh": 40,
+      "fine_mesh": 60,
+      "fine_SHGO_samples": 512,
+      "fine_SHGO_iterations": 3,
+      "coarse_energy": -0.7915925052164239,
+      "fine_fixed_current_energy": -0.79158730713912,
+      "fine_best_energy": -0.7915878270180599,
+      "fixed_current_mesh_delta": 5.198077303925075e-06,
+      "search_gain_on_fine_mesh": 5.198789398974668e-07,
+      "fine_vs_coarse_energy_delta": 4.678198364027608e-06,
+      "fine_SHGO_solver_success": true,
+      "seeded_local_success": true
+    },
+    {
+      "filling": 0.3,
+      "interaction": 2.0,
+      "subspace": "zero_flux",
+      "coarse_mesh": 40,
+      "fine_mesh": 60,
+      "fine_SHGO_samples": 512,
+      "fine_SHGO_iterations": 3,
+      "coarse_energy": -0.7915925052168158,
+      "fine_fixed_current_energy": -0.7915873067069618,
+      "fine_best_energy": -0.7915878270180927,
+      "fixed_current_mesh_delta": 5.1985098540319186e-06,
+      "search_gain_on_fine_mesh": 5.203111309581843e-07,
+      "fine_vs_coarse_energy_delta": 4.678198723073734e-06,
+      "fine_SHGO_solver_success": true,
+      "seeded_local_success": true
+    },
+    {
+      "filling": 0.5,
+      "interaction": 1.5,
+      "subspace": "unconstrained",
+      "coarse_mesh": 40,
+      "fine_mesh": 60,
+      "fine_SHGO_samples": 512,
+      "fine_SHGO_iterations": 3,
+      "coarse_energy": -0.8703344483365869,
+      "fine_fixed_current_energy": -0.8703836980037147,
+      "fine_best_energy": -0.8703862370849857,
+      "fixed_current_mesh_delta": -4.924966712782641e-05,
+      "search_gain_on_fine_mesh": 2.5390812710135435e-06,
+      "fine_vs_coarse_energy_delta": -5.178874839883996e-05,
+      "fine_SHGO_solver_success": true,
+      "seeded_local_success": true
+    },
+    {
+      "filling": 0.5,
+      "interaction": 1.5,
+      "subspace": "zero_flux",
+      "coarse_mesh": 40,
+      "fine_mesh": 60,
+      "fine_SHGO_samples": 512,
+      "fine_SHGO_iterations": 3,
+      "coarse_energy": -0.8206962861261852,
+      "fine_fixed_current_energy": -0.8205874646459508,
+      "fine_best_energy": -0.8205878020407678,
+      "fixed_current_mesh_delta": 0.00010882148023438898,
+      "search_gain_on_fine_mesh": 3.373948169738128e-07,
+      "fine_vs_coarse_energy_delta": 0.00010848408541741517,
+      "fine_SHGO_solver_success": true,
+      "seeded_local_success": true
+    },
+    {
+      "filling": 0.4,
+      "interaction": 4.0,
+      "subspace": "unconstrained",
+      "coarse_mesh": 40,
+      "fine_mesh": 60,
+      "fine_SHGO_samples": 512,
+      "fine_SHGO_iterations": 3,
+      "coarse_energy": -0.9919832608268929,
+      "fine_fixed_current_energy": -0.9919127429949727,
+      "fine_best_energy": -0.9920528583784394,
+      "fixed_current_mesh_delta": 7.051783192024708e-05,
+      "search_gain_on_fine_mesh": 0.00014011538346669905,
+      "fine_vs_coarse_energy_delta": -6.959755154645197e-05,
+      "fine_SHGO_solver_success": true,
+      "seeded_local_success": true
+    },
+    {
+      "filling": 0.4,
+      "interaction": 4.0,
+      "subspace": "zero_flux",
+      "coarse_mesh": 40,
+      "fine_mesh": 60,
+      "fine_SHGO_samples": 512,
+      "fine_SHGO_iterations": 3,
+      "coarse_energy": -0.9733622644813088,
+      "fine_fixed_current_energy": -0.9733049986466887,
+      "fine_best_energy": -0.9733085402226325,
+      "fixed_current_mesh_delta": 5.726583462006829e-05,
+      "search_gain_on_fine_mesh": 3.541575943732944e-06,
+      "fine_vs_coarse_energy_delta": 5.3724258676335346e-05,
+      "fine_SHGO_solver_success": true,
+      "seeded_local_success": true
+    },
+    {
+      "filling": 0.5,
+      "interaction": 4.0,
+      "subspace": "unconstrained",
+      "coarse_mesh": 40,
+      "fine_mesh": 60,
+      "fine_SHGO_samples": 512,
+      "fine_SHGO_iterations": 3,
+      "coarse_energy": -1.1611005169059734,
+      "fine_fixed_current_energy": -1.16110051848514,
+      "fine_best_energy": -1.1611005184918481,
+      "fixed_current_mesh_delta": -1.5791665752828976e-09,
+      "search_gain_on_fine_mesh": 6.708189559390121e-12,
+      "fine_vs_coarse_energy_delta": -1.5858747648422877e-09,
+      "fine_SHGO_solver_success": true,
+      "seeded_local_success": true
+    },
+    {
+      "filling": 0.5,
+      "interaction": 4.0,
+      "subspace": "zero_flux",
+      "coarse_mesh": 40,
+      "fine_mesh": 60,
+      "fine_SHGO_samples": 512,
+      "fine_SHGO_iterations": 3,
+      "coarse_energy": -1.1304094028350367,
+      "fine_fixed_current_energy": -1.1304094028350713,
+      "fine_best_energy": -1.1304094028350835,
+      "fixed_current_mesh_delta": -3.4638958368304884e-14,
+      "search_gain_on_fine_mesh": 1.2212453270876722e-14,
+      "fine_vs_coarse_energy_delta": -4.6851411639181606e-14,
+      "fine_SHGO_solver_success": true,
+      "seeded_local_success": true
+    },
+    {
+      "filling": 0.7,
+      "interaction": 4.5,
+      "subspace": "unconstrained",
+      "coarse_mesh": 40,
+      "fine_mesh": 60,
+      "fine_SHGO_samples": 512,
+      "fine_SHGO_iterations": 3,
+      "coarse_energy": -0.816687962231095,
+      "fine_fixed_current_energy": -0.8166339159420646,
+      "fine_best_energy": -0.8166828396464498,
+      "fixed_current_mesh_delta": 5.4046289030385e-05,
+      "search_gain_on_fine_mesh": 4.8923704385250844e-05,
+      "fine_vs_coarse_energy_delta": 5.122584645134154e-06,
+      "fine_SHGO_solver_success": true,
+      "seeded_local_success": true
+    },
+    {
+      "filling": 0.7,
+      "interaction": 4.5,
+      "subspace": "zero_flux",
+      "coarse_mesh": 40,
+      "fine_mesh": 60,
+      "fine_SHGO_samples": 512,
+      "fine_SHGO_iterations": 3,
+      "coarse_energy": -0.7865369447518565,
+      "fine_fixed_current_energy": -0.7866149192565633,
+      "fine_best_energy": -0.7866238554602857,
+      "fixed_current_mesh_delta": -7.797450470681255e-05,
+      "search_gain_on_fine_mesh": 8.936203722331726e-06,
+      "fine_vs_coarse_energy_delta": -8.691070842914428e-05,
+      "fine_SHGO_solver_success": true,
+      "seeded_local_success": true
+    },
+    {
+      "filling": 0.9,
+      "interaction": 4.75,
+      "subspace": "unconstrained",
+      "coarse_mesh": 40,
+      "fine_mesh": 60,
+      "fine_SHGO_samples": 512,
+      "fine_SHGO_iterations": 3,
+      "coarse_energy": -0.28664502555773796,
+      "fine_fixed_current_energy": -0.28663964838605066,
+      "fine_best_energy": -0.2866443687898151,
+      "fixed_current_mesh_delta": 5.3771716873041164e-06,
+      "search_gain_on_fine_mesh": 4.720403764424397e-06,
+      "fine_vs_coarse_energy_delta": 6.567679228797196e-07,
+      "fine_SHGO_solver_success": true,
+      "seeded_local_success": true
+    },
+    {
+      "filling": 0.9,
+      "interaction": 4.75,
+      "subspace": "zero_flux",
+      "coarse_mesh": 40,
+      "fine_mesh": 60,
+      "fine_SHGO_samples": 512,
+      "fine_SHGO_iterations": 3,
+      "coarse_energy": -0.28664502555773796,
+      "fine_fixed_current_energy": -0.28663964838605066,
+      "fine_best_energy": -0.2866443687901454,
+      "fixed_current_mesh_delta": 5.3771716873041164e-06,
+      "search_gain_on_fine_mesh": 4.720404094715747e-06,
+      "fine_vs_coarse_energy_delta": 6.567675925883698e-07,
+      "fine_SHGO_solver_success": true,
+      "seeded_local_success": true
+    }
+  ],
+  "unconstrained": {
+    "failed_solver_cells": 0,
+    "max_absolute_square_flux": 3.6867088308281004,
+    "parameters": {
+      "mesh": 40,
+      "t": 1.0,
+      "tp": 0.2,
+      "interaction": 0.25,
+      "occupation": "canonical",
+      "particle_tolerance": 3.0
+    },
+    "settings": {
+      "method": "SHGO",
+      "samples": 256,
+      "iterations": 2,
+      "sampling": "sobol",
+      "symmetry": "rlex",
+      "legacy_lex_slack": 0.0,
+      "zero_flux": false,
+      "bounds": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ]
+    }
+  },
+  "zero_flux": {
+    "failed_solver_cells": 0,
+    "max_absolute_square_flux": 9.980627435624e-13,
+    "parameters": {
+      "mesh": 40,
+      "t": 1.0,
+      "tp": 0.2,
+      "interaction": 0.25,
+      "occupation": "canonical",
+      "particle_tolerance": 3.0
+    },
+    "settings": {
+      "method": "SHGO",
+      "samples": 256,
+      "iterations": 2,
+      "sampling": "sobol",
+      "symmetry": "rlex",
+      "legacy_lex_slack": 0.0,
+      "zero_flux": true,
+      "bounds": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ]
+    }
+  },
+  "scope": "Finite-grid order-parameter/flux maps, not certified A-H phase boundaries; selected refinement checks do not establish full-grid convergence. Loop-current ansatz only.",
+  "environment": {
+    "python": "3.11.5",
+    "numpy": "1.26.4",
+    "scipy": "1.15.1",
+    "matplotlib": "3.10.0"
+  }
+}

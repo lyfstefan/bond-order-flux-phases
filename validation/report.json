@@ -321,6 +321,13 @@
     "continuum": -0.24317084074161066,
     "absolute_error": 2.7770123923243073e-05
   },
+  "versioned_phase_map_checks": {
+    "points": 760,
+    "global_searches_repeated": false,
+    "max_stored_vs_reevaluated_energy_error": 0.0,
+    "max_zero_flux_residual": 9.980627435624e-13,
+    "max_variational_nesting_violation": 1.0504930259003231e-12
+  },
   "scope": "Import-safe source refactor; source-band/energy comparisons, normalization and bounded optimization checks. No final-version identification or full paper phase-diagram reproduction. Loop-current ansatz only; no CDW competition.",
   "all_checks_passed": true
 }

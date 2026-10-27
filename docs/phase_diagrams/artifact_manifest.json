@@ -1,0 +1,20 @@
+{
+  "README.md": "e4ec5e4b33c37d8b9c7d38ccda9eb3ab86c3dd211463e71f73649e5821c011a0",
+  "audit.json": "1c27e38cc0fa6a36b7586adf04c37128a37976387d254170b1b115cc81215436",
+  "audited/unconstrained.json": "dd5ca0a91149a5d8f41cf97b252c0a66a11317dbcf94db9520e07343d4575f44",
+  "audited/unconstrained.npz": "d2481cd7b13d958ac8386c00c6b1e5f7b1c838e7ca281127e8a973948552d983",
+  "audited/unconstrained_order_parameters.png": "4e1d469761ec56d2866cbd9cd0b134a46b7237fbe1570783c3ad8cf05f76f19c",
+  "audited/unconstrained_order_parameters.svg": "e006c0f0bfb87d481efd58a41a4871541018296673a06e76e69e02a9d750205d",
+  "audited/zero_flux.json": "19daff89f61f6f6a43adbf1d7cbe6ddd4a11df92b6d79428b36bc59308aa1b67",
+  "audited/zero_flux.npz": "a63fa2457101117088d2e6e366846533ff8633e92f3bdd2e01af8a4eea6993ba",
+  "audited/zero_flux_order_parameters.png": "4f629e9413e06918e3161a515497168c556e471611695726cf3dc98f81188385",
+  "audited/zero_flux_order_parameters.svg": "373c33c8dfc116f306216aa1507e55b3a782dabc47942d0cf626e8e6562563bc",
+  "phase_diagram_comparison.png": "c085011646c89e35d93bc5b4ddaf41a64904aa1de4927549734c3f55d4f55489",
+  "phase_diagram_comparison.svg": "45a58ec1c36a2ef10e72e3e2e62647a1f1a2712d64081cc9d60a26ac1a27b24c",
+  "unconstrained/phase_diagram.png": "da3c2feddcbfc781f7ddcc0ab3aee80bc4b73227a89d32b03fa75b49fe213e2d",
+  "unconstrained/phase_diagram.svg": "a29166dbc2a10795d87603bd9031a6b0bf771394d7c99c1fae7ea13de8bb1b6d",
+  "unconstrained/sweep.json": "efb389ef2a90d61ceda6bc43711fabb28d7515c1059cf5fdd5cdfdf4425e1b73",
+  "zero_flux/phase_diagram.png": "9cfb7e12ec50a39951cbdc6d27aa68b2ed9b116a16250eee5830e5af7848f173",
+  "zero_flux/phase_diagram.svg": "f5e0fed4321e8fb385cb26514170c0cb6b0fe6e5147ba6d0d5a39892b2511e58",
+  "zero_flux/sweep.json": "c3cad57bc6429fe3c3b116d87d4394fa56cb13db514b6544307e896704882e3b"
+}

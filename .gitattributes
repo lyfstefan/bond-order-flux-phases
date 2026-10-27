@@ -1,0 +1,2 @@
+# Matplotlib SVG path data conventionally ends coordinate lines with spaces.
+*.svg -whitespace

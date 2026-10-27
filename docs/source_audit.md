@@ -35,8 +35,14 @@ the zero-flux source's 1e-5 LEX slack (including its shifted current equality),
 its sampling budget, feasibility and solver messages. Its explicit Sobol
 settings are not a recovery of every implicit default in older versions.
 
-No full phase diagram was rerun. Fixed-trial source comparison and mesh
-checks cannot identify which historical optimizer run generated a figure.
+New finite-grid phase-map scans are supplied in `phase_diagrams/`: ordinary
+and zero-square-flux subspaces, each with 19x20 parameter points and a 40x40
+momentum mesh. They use canonical filling, explicit RLEX, SHGO 256x2 and
+recorded admissible-seed refinements. Raw independent sweeps are retained.
+These are new calculations, not verified recovery of the publication figures.
+The separate audit includes nesting of variational spaces and selected 60x60
+mesh checks. These checks cannot identify which historical optimizer run
+generated a figure or certify the full phase-boundary convergence.
 The clean package, example curves and numerical reports are a 2026 refactor
 release, not the final paper's original output archive. The publication's
 loop-current-only scope remains in force.

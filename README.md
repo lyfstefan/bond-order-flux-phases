@@ -17,6 +17,41 @@ have reproduced every published phase boundary.
 This bond-order project is separate from the author's Affleck project.
 No Affleck source or result files are included.
 
+## Phase diagrams
+
+![Calculated bond-order and flux maps](docs/phase_diagrams/phase_diagram_comparison.png)
+
+The figure compares ordinary and zero-square-flux subspaces at t=1, t'=0.2,
+with 19 fillings (.05 to .95), 20 interactions (.25 to 5), a 40x40 momentum
+mesh, canonical occupation and RLEX symmetry constraints. Each subspace has
+380 calculated parameter points. Color cells are not interpolated.
+
+The scans start with SHGO (256 Sobol samples, two iterations), followed by
+explicitly recorded admissible cross-subspace seeds, selected finer-grid
+seeds and neighbor continuation. Raw independent scans are preserved.
+The lower-energy feasible candidates are always evaluated at the actual
+parameter point; neighboring or finer-grid values are never copied in as
+interpolated energies. The audit includes the variational nesting check
+and 12 selected 60x60-mesh / 512-sample / three-iteration refinement checks.
+These are finite-grid maps, not certified phase boundaries or automatic
+recovery of the paper's A-H labels.
+
+[Four current maps, unrestricted square flux](docs/phase_diagrams/audited/unconstrained_order_parameters.png) |
+[Four current maps, zero square flux](docs/phase_diagrams/audited/zero_flux_order_parameters.png) |
+[Data and numerical audit](docs/phase_diagrams/README.md).
+
+Generate the paired scans, audited figures and refinement checks:
+
+```sh
+OPENBLAS_NUM_THREADS=1 python -m examples.phase_diagrams
+```
+
+To regenerate the versioned figures from their saved raw scans:
+
+```sh
+OPENBLAS_NUM_THREADS=1 python -m examples.phase_diagrams --plot-only --output docs/phase_diagrams
+```
+
 ## Run
 
 Python 3.11 was used for validation. From this repository root:
@@ -49,6 +84,15 @@ A small explicit sweep, saved incrementally:
 OPENBLAS_NUM_THREADS=1 python -m bond_order.cli sweep \
   --fillings .3,.4,.5 --interactions 2,3,4 --occupation canonical \
   --mesh 24 --samples 64 --iterations 1 --output examples/output/sweep
+```
+
+Completed two-dimensional sweeps also save `phase_diagram.png` and `.svg`.
+Use `--resume` to continue a compatible checkpoint; mismatched settings are
+rejected. Plot a saved scan without repeating optimization:
+
+```sh
+python -m bond_order.cli plot-sweep --input examples/output/sweep/sweep.json \
+  --output examples/output/sweep
 ```
 
 All sweeps are serial and run only when requested. No top-level fitting,
@@ -129,7 +173,9 @@ references exactly in the tested environment, and the legacy-mode total
 energies differ by at most 2.3e-16. Independent checks cover Hermitian
 diagonalization, symmetry, folded counting, a known free-lattice continuum
 energy, the RLEX region, and an occupation-degeneracy example. Small SHGO
-runs exercise legacy/canonical filling and ordinary/zero-flux subspaces.
+runs exercise legacy/canonical filling and ordinary/zero-flux subspaces. The
+versioned phase-map scans and their separate audit extend that bounded check
+to the stated parameter grid; they do not identify historical figure versions.
 See `validation/report.json` for all settings and results; this is bounded
 evidence, not a universal equivalence or global-minimum certificate.
 

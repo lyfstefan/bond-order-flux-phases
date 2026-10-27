@@ -4,6 +4,7 @@ import json,platform
 import numpy as np
 import scipy
 from bond_order import FluxModel,solve
+from bond_order.optimization import rlex_values
 from reference import parallel_integral,zero_flux
 
 
@@ -42,6 +43,28 @@ def main():
         assert result["any_feasible_solver_candidate"]
         if zero:assert abs(result["square_flux"])<1e-6
         report["optimization_examples"].append(result)
+    # Re-evaluate versioned scan data without redoing 760 global searches.
+    phase_root=Path(__file__).resolve().parents[1]/"docs/phase_diagrams"
+    if (phase_root/"audit.json").exists():
+        loaded={name:json.loads((phase_root/"audited"/f"{name}.json").read_text()) for name in ["unconstrained","zero_flux"]}
+        max_error=0.;max_zero_flux=0.;maps={}
+        for name,rows in loaded.items():
+            maps[name]={}
+            assert len(rows)==380
+            for row in rows:
+                model=FluxModel(**row["parameters"])
+                value=model.energy(row["currents"],row["requested_filling"])
+                max_error=max(max_error,abs(value-row["energy_per_site"]))
+                assert min(rlex_values(row["currents"]))>=-1e-6
+                assert -1-1e-6<=row["currents"][0]<=1e-6 and max(abs(np.asarray(row["currents"])))<=1+1e-6
+                if name=="zero_flux":max_zero_flux=max(max_zero_flux,abs(model.square_flux(row["currents"])))
+                maps[name][(model.interaction,row["requested_filling"])]=value
+        assert maps["unconstrained"].keys()==maps["zero_flux"].keys()
+        gap=max(maps["unconstrained"][k]-maps["zero_flux"][k] for k in maps["unconstrained"])
+        assert max_error<1e-9 and max_zero_flux<1e-6 and gap<1e-8
+        report["versioned_phase_map_checks"]={"points":760,"global_searches_repeated":False,
+            "max_stored_vs_reevaluated_energy_error":max_error,"max_zero_flux_residual":max_zero_flux,
+            "max_variational_nesting_violation":gap}
     report["scope"]="Import-safe source refactor; source-band/energy comparisons, normalization and bounded optimization checks. No final-version identification or full paper phase-diagram reproduction. Loop-current ansatz only; no CDW competition."
     report["all_checks_passed"]=True
     Path(__file__).with_name("report.json").write_text(json.dumps(report,indent=2)+"\n")
