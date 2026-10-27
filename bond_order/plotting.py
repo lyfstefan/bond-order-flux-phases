@@ -3,7 +3,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import TwoSlopeNorm
-from .publication_style import apply_style, width
+from .publication_style import apply_style, width, panel_colorbar
 
 
 def scan_grid(results):
@@ -95,7 +95,7 @@ def _map(ax, grid, values, **kwargs):
         rasterized=True,
         **kwargs,
     )
-    ax.set(xlabel=r"Filling $\nu$", ylabel="Interaction V / t")
+    ax.set(xlabel=r"Filling $\nu$", ylabel=r"Interaction $V/t$")
     ax.set_xlim(grid["fillings"][[0, -1]])
     ax.set_ylim(grid["interactions"][[0, -1]])
     # Convert energy-coordinate labels only when t differs from one.
@@ -138,8 +138,8 @@ def plot_phase_diagram(results):
             cmap="RdBu_r",
             norm=TwoSlopeNorm(vmin=-1, vcenter=0, vmax=1),
         )
-        ax.set_title(f"({chr(97+index)}) $J_{index+1}$")
-    fig.colorbar(im, ax=axes, label="Current order parameter", shrink=0.8)
+        ax.set_title(f"({chr(97+index)})")
+        panel_colorbar(fig, ax, im, rf"$J_{index+1}$")
     subspace = (
         "Zero square flux"
         if grid["settings"]["zero_flux"]
@@ -167,9 +167,9 @@ def plot_phase_comparison(ordinary, zero_flux):
     )
     fields = ["current_rms", "bond_amplitude_spread", "square_flux_over_pi"]
     labels = [
-        r"$\sqrt{\langle J_i^2\rangle}$",
-        r"$\max |t_i|-\min |t_i|$",
-        r"$\phi_{sq}/\pi$",
+        r"$J_{\mathrm{rms}}$",
+        r"$\Delta |t|$",
+        r"$\phi_{\mathrm{sq}}/\pi$",
     ]
     for row, (field, label) in enumerate(zip(fields, labels)):
         high = max(max(float(np.max(abs(g[field]))) for g in grids), 1e-8)
@@ -184,7 +184,7 @@ def plot_phase_comparison(ordinary, zero_flux):
                 f"({chr(97+row*2+col)}) "
                 + ("Unconstrained" if col == 0 else "Zero square flux")
             )
-        fig.colorbar(im, ax=axes[row, :], label=label, shrink=0.9)
+            panel_colorbar(fig, axes[row, col], im, label)
 
     return fig
 
@@ -199,7 +199,7 @@ def plot_bands(model, currents):
         im = ax.pcolormesh(
             model.kx / np.pi, model.ky / np.pi, band, shading="auto", cmap="viridis"
         )
-        ax.set(xlabel="kx / pi", ylabel="ky / pi", title=label)
-        fig.colorbar(im, ax=ax, label="Energy")
+        ax.set(xlabel=r"$k_x/\pi$", ylabel=r"$k_y/\pi$", title=label)
+        panel_colorbar(fig, ax, im, r"$E_-$" if label == "Lower band" else r"$E_+$")
     fig.suptitle(rf"Four-current bands: $V/t = {model.interaction/model.t:g}$")
     return fig

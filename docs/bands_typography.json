@@ -8,31 +8,79 @@
   "colorbar_ticks_pt": 9,
   "annotations_pt": 9,
   "legends_pt": 9,
-  "page_width_cm": 15.200000000000001,
-  "page_height_cm": 8.815999999999999,
+  "page_width_cm": 8.841811519292444,
+  "page_height_cm": 5.128250681189616,
   "font_family": "Computer Modern Roman",
   "math_font_family": "Computer Modern Math Italic",
   "data_frames": [
     {
       "bounds_figure_fraction": [
-        0.09145672978199926,
-        0.20767916359564348,
-        0.3934999918850923,
-        0.7284434086009764
+        0.13006144794600943,
+        0.1981371311737967,
+        0.41653142260293974,
+        0.6920508805822974
       ],
-      "width_cm": 4.5910575839670145,
-      "height_cm": 4.5910575839670145
+      "width_cm": 2.5329135218530605,
+      "height_cm": 2.532913521853061
     },
     {
       "bounds_figure_fraction": [
-        0.5997743000004724,
-        0.20767916359564365,
-        0.9018175621035652,
-        0.7284434086009763
+        0.6393072194537568,
+        0.19813713117379703,
+        0.9257771941106867,
+        0.6920508805822969
       ],
-      "width_cm": 4.591057583967011,
-      "height_cm": 4.591057583967013
+      "width_cm": 2.532913521853057,
+      "height_cm": 2.532913521853057
     }
   ],
+  "colorbars": [
+    {
+      "parent_bounds_figure_fraction": [
+        0.13006144794600943,
+        0.1981371311737967,
+        0.41653142260293974,
+        0.6920508805822974
+      ],
+      "bounds_figure_fraction": [
+        0.42942257146250157,
+        0.1981371311737967,
+        0.4423137203220634,
+        0.49448538081889715
+      ],
+      "height_fraction_of_frame": 0.6000000000000001,
+      "width_fraction_of_frame": 0.04499999999999988,
+      "bottom_offset_cm": 0.0,
+      "label": "$E_-$",
+      "label_position": "above",
+      "shared": false,
+      "label_bottom_clearance_cm": 0.0796056454960568,
+      "scientific_exponent": 0
+    },
+    {
+      "parent_bounds_figure_fraction": [
+        0.6393072194537568,
+        0.19813713117379703,
+        0.9257771941106867,
+        0.6920508805822969
+      ],
+      "bounds_figure_fraction": [
+        0.9386683429702486,
+        0.19813713117379703,
+        0.9515594918298105,
+        0.4944853808188969
+      ],
+      "height_fraction_of_frame": 0.5999999999999999,
+      "width_fraction_of_frame": 0.04500000000000014,
+      "bottom_offset_cm": 0.0,
+      "label": "$E_+$",
+      "label_position": "above",
+      "shared": false,
+      "label_bottom_clearance_cm": 0.0766780651320029,
+      "scientific_exponent": 0
+    }
+  ],
+  "target_frame_side_cm": 2.5,
+  "latex_preamble": "\\usepackage{amsmath}\\usepackage{textcomp}",
   "pinned_font_file": null
 }

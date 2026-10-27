@@ -56,7 +56,7 @@ def draw(ax, data, title):
         ax.text(
             point["filling"],
             point["interaction"],
-            rf"$\mathrm{{{label}}}$",
+            rf"${label}$",
             color=color,
             ha="center",
             va="center",
@@ -87,7 +87,7 @@ def export_regions(root):
         draw(ax, item, title)
     fig.legend(
         [Patch(facecolor=c) for c in COLORS],
-        LABELS,
+        [rf"${label}$" for label in LABELS],
         loc="outside lower center",
         ncol=9,
         frameon=False,
@@ -95,7 +95,7 @@ def export_regions(root):
         handletextpad=0.35,
         columnspacing=0.8,
     )
-    fig.suptitle(r"Historical phase regions: $t=1$, $t^{\prime}=0.2$")
+    fig.suptitle(r"Original phase regions: $t=1$, $t^{\prime}=0.2$")
     stem = root / "phase_regions"
     save(fig, stem)
     plt.close(fig)

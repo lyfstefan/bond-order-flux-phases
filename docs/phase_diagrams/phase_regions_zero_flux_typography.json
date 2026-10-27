@@ -8,21 +8,24 @@
   "colorbar_ticks_pt": 9,
   "annotations_pt": 9,
   "legends_pt": 9,
-  "page_width_cm": 7.6000000000000005,
-  "page_height_cm": 8.362,
+  "page_width_cm": 3.95083156864325,
+  "page_height_cm": 4.712831568643249,
   "font_family": "Computer Modern Roman",
   "math_font_family": "Computer Modern Math Italic",
   "data_frames": [
     {
       "bounds_figure_fraction": [
-        0.14964317869010663,
-        0.14594545342393478,
-        0.9587442880791528,
-        0.8813159905390688
+        0.28786045122023896,
+        0.2587395419866421,
+        0.9206386288175497,
+        0.7892061974541769
       ],
-      "width_cm": 6.149168431356751,
-      "height_cm": 6.149168431356751
+      "width_cm": 2.5,
+      "height_cm": 2.5
     }
   ],
+  "colorbars": [],
+  "target_frame_side_cm": 2.5,
+  "latex_preamble": "\\usepackage{amsmath}\\usepackage{textcomp}",
   "pinned_font_file": null
 }
